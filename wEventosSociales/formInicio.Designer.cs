@@ -32,8 +32,7 @@
             this.lblTitulo = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.btnMenu = new System.Windows.Forms.ToolStripMenuItem();
-            this.btnCrearEvento = new System.Windows.Forms.ToolStripMenuItem();
-            this.btnHistorial = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnIrIniciarSesion = new System.Windows.Forms.ToolStripMenuItem();
             this.btnCerrar = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -64,37 +63,31 @@
             // btnMenu
             // 
             this.btnMenu.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.btnCrearEvento,
-            this.btnHistorial,
+            this.btnIrIniciarSesion,
             this.btnCerrar});
             this.btnMenu.Name = "btnMenu";
             this.btnMenu.Size = new System.Drawing.Size(50, 20);
             this.btnMenu.Text = "&Menu";
             // 
-            // btnCrearEvento
+            // btnIrIniciarSesion
             // 
-            this.btnCrearEvento.Name = "btnCrearEvento";
-            this.btnCrearEvento.Size = new System.Drawing.Size(141, 22);
-            this.btnCrearEvento.Text = "&Crear Evento";
-            this.btnCrearEvento.Click += new System.EventHandler(this.btnCrearEvento_Click);
-            // 
-            // btnHistorial
-            // 
-            this.btnHistorial.Name = "btnHistorial";
-            this.btnHistorial.Size = new System.Drawing.Size(141, 22);
-            this.btnHistorial.Text = "&Historial";
-            this.btnHistorial.Click += new System.EventHandler(this.btnHistorial_Click);
+            this.btnIrIniciarSesion.Name = "btnIrIniciarSesion";
+            this.btnIrIniciarSesion.Size = new System.Drawing.Size(180, 22);
+            this.btnIrIniciarSesion.Text = "&Iniciar sesión";
+            this.btnIrIniciarSesion.Click += new System.EventHandler(this.btnIrIniciarSesion_Click);
             // 
             // btnCerrar
             // 
             this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(141, 22);
+            this.btnCerrar.Size = new System.Drawing.Size(180, 22);
             this.btnCerrar.Text = "&Cerrar";
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.SystemColors.Control;
-            this.pictureBox1.Image = global::wEventosSociales.Properties.Resources._98d3ddc1_0315_4987_9f33_6564ccc4c3b7;
+            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.Location = new System.Drawing.Point(302, 97);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(202, 200);
@@ -144,8 +137,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem btnMenu;
-        private System.Windows.Forms.ToolStripMenuItem btnCrearEvento;
-        private System.Windows.Forms.ToolStripMenuItem btnHistorial;
+        private System.Windows.Forms.ToolStripMenuItem btnIrIniciarSesion;
         private System.Windows.Forms.ToolStripMenuItem btnCerrar;
         private System.Windows.Forms.Label label1;
     }

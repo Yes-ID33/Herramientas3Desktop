@@ -81,6 +81,12 @@
     <Compile Include="formListaTareas.Designer.cs">
       <DependentUpon>formListaTareas.cs</DependentUpon>
     </Compile>
+    <Compile Include="formLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formLogin.Designer.cs">
+      <DependentUpon>formLogin.cs</DependentUpon>
+    </Compile>
     <Compile Include="formPlanificacion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -93,11 +99,11 @@
     <Compile Include="formPlanificacionActividades.Designer.cs">
       <DependentUpon>formPlanificacionActividades.cs</DependentUpon>
     </Compile>
-    <Compile Include="formRegister.cs.cs">
+    <Compile Include="formRegister.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="formRegister.cs.Designer.cs">
-      <DependentUpon>formRegister.cs.cs</DependentUpon>
+    <Compile Include="formRegister.Designer.cs">
+      <DependentUpon>formRegister.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -116,25 +122,22 @@
     <EmbeddedResource Include="formListaTareas.resx">
       <DependentUpon>formListaTareas.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="formLogin.resx">
+      <DependentUpon>formLogin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="formPlanificacion.resx">
       <DependentUpon>formPlanificacion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="formPlanificacionActividades.resx">
       <DependentUpon>formPlanificacionActividades.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="formRegister.cs.resx">
-      <DependentUpon>formRegister.cs.cs</DependentUpon>
+    <EmbeddedResource Include="formRegister.resx">
+      <DependentUpon>formRegister.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -149,10 +152,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\LogoEventosOcaso.jfif" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\98d3ddc1-0315-4987-9f33-6564ccc4c3b7.jfif" />
+    <Content Include="Resources\backgroundImage.jpeg" />
+    <Content Include="Resources\logoEventosOcaso.jpg" />
+    <Content Include="Resources\passwordImage.jpg" />
+    <Content Include="Resources\userImage.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

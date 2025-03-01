@@ -16,5 +16,32 @@ namespace wEventosSociales
         {
             InitializeComponent();
         }
+
+        private void formRegister_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnIrIniciarSesion_Click(object sender, EventArgs e)
+        {
+            formLogin formLogin = new formLogin();
+            formLogin.Show();
+            this.Close();
+        }
+
+        private void menuToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCrearCuenta_Click(object sender, EventArgs e)
+        {
+            //usar las clases del crud para crear un método que inserte la info del usuario en la DB
+        }
+
+        private void cerrarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
