@@ -16,5 +16,15 @@ namespace wEventosSociales
         {
             InitializeComponent();
         }
+
+        private void formRegister_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnIrIniciarSesion_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
