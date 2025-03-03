@@ -44,9 +44,22 @@ namespace wEventosSociales
 
         private void btnReservarEventos_Click(object sender, EventArgs e)
         {
-            FormInfoApp Form1 = new FormInfoApp();
+            FormCrearEvento Form1 = new FormCrearEvento();
             Form1.Show();
             this.Close();
+        }
+
+        
+        private void inicioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            FormInicio formInicio = new FormInicio();
+            formInicio.Show();
+        }
+
+        private void cerrarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

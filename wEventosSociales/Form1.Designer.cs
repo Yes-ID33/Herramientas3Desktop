@@ -48,8 +48,8 @@
             this.lblDescripcionEvento = new System.Windows.Forms.Label();
             this.lblAproxInv = new System.Windows.Forms.Label();
             this.txtInvitadosAprox = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtIntCodigoEvento = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.cboNivelEvento = new System.Windows.Forms.ComboBox();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -58,7 +58,7 @@
             // 
             this.txtUbicacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUbicacion.ForeColor = System.Drawing.Color.Black;
-            this.txtUbicacion.Location = new System.Drawing.Point(219, 180);
+            this.txtUbicacion.Location = new System.Drawing.Point(219, 206);
             this.txtUbicacion.Name = "txtUbicacion";
             this.txtUbicacion.Size = new System.Drawing.Size(211, 30);
             this.txtUbicacion.TabIndex = 0;
@@ -68,7 +68,7 @@
             this.cboTipoEvento.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboTipoEvento.ForeColor = System.Drawing.Color.Black;
             this.cboTipoEvento.FormattingEnabled = true;
-            this.cboTipoEvento.Location = new System.Drawing.Point(219, 130);
+            this.cboTipoEvento.Location = new System.Drawing.Point(219, 114);
             this.cboTipoEvento.Name = "cboTipoEvento";
             this.cboTipoEvento.Size = new System.Drawing.Size(211, 33);
             this.cboTipoEvento.TabIndex = 1;
@@ -89,7 +89,7 @@
             // dtpFecha
             // 
             this.dtpFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpFecha.Location = new System.Drawing.Point(219, 229);
+            this.dtpFecha.Location = new System.Drawing.Point(219, 255);
             this.dtpFecha.Name = "dtpFecha";
             this.dtpFecha.Size = new System.Drawing.Size(343, 30);
             this.dtpFecha.TabIndex = 3;
@@ -99,7 +99,7 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Tan;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 15F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(42, 130);
+            this.label2.Location = new System.Drawing.Point(42, 114);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(157, 28);
             this.label2.TabIndex = 4;
@@ -110,7 +110,7 @@
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Tan;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 15F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(88, 180);
+            this.label3.Location = new System.Drawing.Point(90, 206);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(109, 28);
             this.label3.TabIndex = 5;
@@ -121,7 +121,7 @@
             this.lblFecha.AutoSize = true;
             this.lblFecha.BackColor = System.Drawing.Color.Tan;
             this.lblFecha.Font = new System.Drawing.Font("Segoe UI", 15F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFecha.Location = new System.Drawing.Point(119, 229);
+            this.lblFecha.Location = new System.Drawing.Point(129, 257);
             this.lblFecha.Name = "lblFecha";
             this.lblFecha.Size = new System.Drawing.Size(70, 28);
             this.lblFecha.TabIndex = 6;
@@ -155,7 +155,7 @@
             // txtDescripcion
             // 
             this.txtDescripcion.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.txtDescripcion.Location = new System.Drawing.Point(583, 169);
+            this.txtDescripcion.Location = new System.Drawing.Point(583, 168);
             this.txtDescripcion.Multiline = true;
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Size = new System.Drawing.Size(328, 261);
@@ -177,6 +177,7 @@
             this.btnLimpiar.TabIndex = 11;
             this.btnLimpiar.Text = "Limpiar";
             this.btnLimpiar.UseVisualStyleBackColor = false;
+            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
             // 
             // btnPlanificacion
             // 
@@ -213,7 +214,7 @@
             this.lblHora.AutoSize = true;
             this.lblHora.BackColor = System.Drawing.Color.Tan;
             this.lblHora.Font = new System.Drawing.Font("Segoe UI", 15F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHora.Location = new System.Drawing.Point(124, 278);
+            this.lblHora.Location = new System.Drawing.Point(135, 306);
             this.lblHora.Name = "lblHora";
             this.lblHora.Size = new System.Drawing.Size(64, 28);
             this.lblHora.TabIndex = 17;
@@ -223,7 +224,7 @@
             // 
             this.dtpHora.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpHora.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dtpHora.Location = new System.Drawing.Point(219, 278);
+            this.dtpHora.Location = new System.Drawing.Point(219, 304);
             this.dtpHora.Name = "dtpHora";
             this.dtpHora.ShowUpDown = true;
             this.dtpHora.Size = new System.Drawing.Size(211, 30);
@@ -234,7 +235,7 @@
             this.lblDescripcionEvento.AutoSize = true;
             this.lblDescripcionEvento.BackColor = System.Drawing.Color.Tan;
             this.lblDescripcionEvento.Font = new System.Drawing.Font("Segoe UI", 15F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDescripcionEvento.Location = new System.Drawing.Point(578, 138);
+            this.lblDescripcionEvento.Location = new System.Drawing.Point(588, 119);
             this.lblDescripcionEvento.Name = "lblDescripcionEvento";
             this.lblDescripcionEvento.Size = new System.Drawing.Size(191, 28);
             this.lblDescripcionEvento.TabIndex = 19;
@@ -246,7 +247,7 @@
             this.lblAproxInv.AutoSize = true;
             this.lblAproxInv.BackColor = System.Drawing.Color.Tan;
             this.lblAproxInv.Font = new System.Drawing.Font("Segoe UI", 15F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAproxInv.Location = new System.Drawing.Point(42, 328);
+            this.lblAproxInv.Location = new System.Drawing.Point(31, 351);
             this.lblAproxInv.Name = "lblAproxInv";
             this.lblAproxInv.Size = new System.Drawing.Size(168, 28);
             this.lblAproxInv.TabIndex = 21;
@@ -256,30 +257,31 @@
             // 
             this.txtInvitadosAprox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtInvitadosAprox.ForeColor = System.Drawing.Color.Black;
-            this.txtInvitadosAprox.Location = new System.Drawing.Point(219, 325);
+            this.txtInvitadosAprox.Location = new System.Drawing.Point(219, 351);
             this.txtInvitadosAprox.Name = "txtInvitadosAprox";
             this.txtInvitadosAprox.Size = new System.Drawing.Size(211, 30);
             this.txtInvitadosAprox.TabIndex = 20;
             // 
-            // label1
+            // label4
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Tan;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 15F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(220, 411);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(84, 28);
-            this.label1.TabIndex = 23;
-            this.label1.Text = "Codigo:";
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Tan;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 15F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(29, 159);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(170, 28);
+            this.label4.TabIndex = 25;
+            this.label4.Text = "Nivel del Evento:";
             // 
-            // txtIntCodigoEvento
+            // cboNivelEvento
             // 
-            this.txtIntCodigoEvento.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtIntCodigoEvento.ForeColor = System.Drawing.Color.Black;
-            this.txtIntCodigoEvento.Location = new System.Drawing.Point(307, 411);
-            this.txtIntCodigoEvento.Name = "txtIntCodigoEvento";
-            this.txtIntCodigoEvento.Size = new System.Drawing.Size(211, 30);
-            this.txtIntCodigoEvento.TabIndex = 22;
+            this.cboNivelEvento.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboNivelEvento.ForeColor = System.Drawing.Color.Black;
+            this.cboNivelEvento.FormattingEnabled = true;
+            this.cboNivelEvento.Location = new System.Drawing.Point(219, 159);
+            this.cboNivelEvento.Name = "cboNivelEvento";
+            this.cboNivelEvento.Size = new System.Drawing.Size(211, 33);
+            this.cboNivelEvento.TabIndex = 24;
             // 
             // FormCrearEvento
             // 
@@ -289,8 +291,8 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(976, 566);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.txtIntCodigoEvento);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.cboNivelEvento);
             this.Controls.Add(this.lblAproxInv);
             this.Controls.Add(this.txtInvitadosAprox);
             this.Controls.Add(this.lblDescripcionEvento);
@@ -341,8 +343,8 @@
         private System.Windows.Forms.Label lblDescripcionEvento;
         private System.Windows.Forms.Label lblAproxInv;
         private System.Windows.Forms.TextBox txtInvitadosAprox;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtIntCodigoEvento;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.ComboBox cboNivelEvento;
     }
 }
 

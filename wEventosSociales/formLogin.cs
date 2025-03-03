@@ -27,12 +27,14 @@ namespace wEventosSociales
 
         private void btnEntrar_Click(object sender, EventArgs e)
         {
+            FormInfoApp formInfoApp = new FormInfoApp();
+            formInfoApp.Show();
             this.Close();
-            conexion.Open();
+            /*conexion.Open();
             String consulta = "select = from Usario where Usuario='" + txtUsuario.Text + "' and Contraseña='" + txtContrasenia.Text + "'";
             SqlCommand comando = new SqlCommand(consulta, conexion);
             SqlDataReader lector;
-            /*lector = comando.EndExecuteReader();
+            lector = comando.EndExecuteReader();
 
             if (lector.HasRows == true)
             {
