@@ -53,27 +53,29 @@
             // lblContrasenia
             // 
             this.lblContrasenia.AutoSize = true;
-            this.lblContrasenia.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblContrasenia.Location = new System.Drawing.Point(342, 212);
+            this.lblContrasenia.BackColor = System.Drawing.Color.Gray;
+            this.lblContrasenia.Font = new System.Drawing.Font("Segoe UI Black", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblContrasenia.Location = new System.Drawing.Point(327, 234);
             this.lblContrasenia.Name = "lblContrasenia";
-            this.lblContrasenia.Size = new System.Drawing.Size(136, 29);
+            this.lblContrasenia.Size = new System.Drawing.Size(147, 32);
             this.lblContrasenia.TabIndex = 2;
             this.lblContrasenia.Text = "Contraseña";
             // 
             // lblUsuario
             // 
             this.lblUsuario.AutoSize = true;
-            this.lblUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsuario.Location = new System.Drawing.Point(354, 131);
+            this.lblUsuario.BackColor = System.Drawing.Color.Gray;
+            this.lblUsuario.Font = new System.Drawing.Font("Segoe UI Black", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsuario.Location = new System.Drawing.Point(327, 132);
             this.lblUsuario.Name = "lblUsuario";
-            this.lblUsuario.Size = new System.Drawing.Size(96, 29);
+            this.lblUsuario.Size = new System.Drawing.Size(104, 32);
             this.lblUsuario.TabIndex = 3;
             this.lblUsuario.Text = "Usuario";
             // 
             // txtUsuario
             // 
             this.txtUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsuario.Location = new System.Drawing.Point(493, 127);
+            this.txtUsuario.Location = new System.Drawing.Point(493, 131);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(201, 33);
             this.txtUsuario.TabIndex = 4;
@@ -81,41 +83,45 @@
             // txtContrasenia
             // 
             this.txtContrasenia.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtContrasenia.Location = new System.Drawing.Point(493, 212);
+            this.txtContrasenia.Location = new System.Drawing.Point(493, 233);
             this.txtContrasenia.Name = "txtContrasenia";
             this.txtContrasenia.Size = new System.Drawing.Size(201, 33);
             this.txtContrasenia.TabIndex = 5;
             // 
             // btnEntrar
             // 
-            this.btnEntrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEntrar.Location = new System.Drawing.Point(465, 313);
+            this.btnEntrar.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnEntrar.Font = new System.Drawing.Font("Segoe UI Black", 15F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEntrar.ForeColor = System.Drawing.Color.Transparent;
+            this.btnEntrar.Location = new System.Drawing.Point(410, 313);
             this.btnEntrar.Name = "btnEntrar";
             this.btnEntrar.Size = new System.Drawing.Size(120, 40);
             this.btnEntrar.TabIndex = 6;
             this.btnEntrar.Text = "Entrar";
-            this.btnEntrar.UseVisualStyleBackColor = true;
+            this.btnEntrar.UseVisualStyleBackColor = false;
             this.btnEntrar.Click += new System.EventHandler(this.btnEntrar_Click);
             // 
             // pictureBox1
             // 
             this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 61);
+            this.pictureBox1.Location = new System.Drawing.Point(12, 61);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(279, 292);
+            this.pictureBox1.Size = new System.Drawing.Size(279, 279);
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
             // 
             // btnIrCrearCuenta
             // 
-            this.btnIrCrearCuenta.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnIrCrearCuenta.Location = new System.Drawing.Point(591, 313);
+            this.btnIrCrearCuenta.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnIrCrearCuenta.Font = new System.Drawing.Font("Segoe UI Black", 15F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnIrCrearCuenta.ForeColor = System.Drawing.Color.Transparent;
+            this.btnIrCrearCuenta.Location = new System.Drawing.Point(559, 313);
             this.btnIrCrearCuenta.Name = "btnIrCrearCuenta";
             this.btnIrCrearCuenta.Size = new System.Drawing.Size(147, 40);
             this.btnIrCrearCuenta.TabIndex = 8;
             this.btnIrCrearCuenta.Text = "Crear Cuenta";
-            this.btnIrCrearCuenta.UseVisualStyleBackColor = true;
+            this.btnIrCrearCuenta.UseVisualStyleBackColor = false;
             this.btnIrCrearCuenta.Click += new System.EventHandler(this.btnIrCrearCuenta_Click);
             // 
             // menuStrip1
@@ -140,13 +146,13 @@
             // inicioToolStripMenuItem
             // 
             this.inicioToolStripMenuItem.Name = "inicioToolStripMenuItem";
-            this.inicioToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.inicioToolStripMenuItem.Size = new System.Drawing.Size(106, 22);
             this.inicioToolStripMenuItem.Text = "&Inicio";
             // 
             // cerrarToolStripMenuItem
             // 
             this.cerrarToolStripMenuItem.Name = "cerrarToolStripMenuItem";
-            this.cerrarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.cerrarToolStripMenuItem.Size = new System.Drawing.Size(106, 22);
             this.cerrarToolStripMenuItem.Text = "&Cerrar";
             this.cerrarToolStripMenuItem.Click += new System.EventHandler(this.cerrarToolStripMenuItem_Click);
             // 
@@ -154,7 +160,7 @@
             // 
             this.pictureBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.BackgroundImage")));
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pictureBox2.Location = new System.Drawing.Point(359, 78);
+            this.pictureBox2.Location = new System.Drawing.Point(333, 61);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(57, 82);
             this.pictureBox2.TabIndex = 10;
@@ -164,7 +170,7 @@
             // 
             this.pictureBox3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox3.BackgroundImage")));
             this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pictureBox3.Location = new System.Drawing.Point(359, 166);
+            this.pictureBox3.Location = new System.Drawing.Point(333, 180);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(68, 65);
             this.pictureBox3.TabIndex = 11;

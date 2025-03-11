@@ -43,10 +43,11 @@
             // lblTitulo
             // 
             this.lblTitulo.AutoSize = true;
-            this.lblTitulo.Font = new System.Drawing.Font("Bernard MT Condensed", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitulo.Location = new System.Drawing.Point(306, 35);
+            this.lblTitulo.BackColor = System.Drawing.Color.Gray;
+            this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitulo.Location = new System.Drawing.Point(266, 33);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(183, 31);
+            this.lblTitulo.Size = new System.Drawing.Size(262, 31);
             this.lblTitulo.TabIndex = 0;
             this.lblTitulo.Text = "EVENTOS OCASO";
             // 
@@ -72,14 +73,14 @@
             // btnIrIniciarSesion
             // 
             this.btnIrIniciarSesion.Name = "btnIrIniciarSesion";
-            this.btnIrIniciarSesion.Size = new System.Drawing.Size(180, 22);
+            this.btnIrIniciarSesion.Size = new System.Drawing.Size(142, 22);
             this.btnIrIniciarSesion.Text = "&Iniciar sesión";
             this.btnIrIniciarSesion.Click += new System.EventHandler(this.btnIrIniciarSesion_Click);
             // 
             // btnCerrar
             // 
             this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(180, 22);
+            this.btnCerrar.Size = new System.Drawing.Size(142, 22);
             this.btnCerrar.Text = "&Cerrar";
             this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
@@ -98,7 +99,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Tan;
+            this.label1.BackColor = System.Drawing.Color.Gray;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 18F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
                 | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(98, 342);

@@ -77,12 +77,12 @@
             // lblTitulo
             // 
             this.lblTitulo.AutoSize = true;
-            this.lblTitulo.BackColor = System.Drawing.Color.Tan;
-            this.lblTitulo.Font = new System.Drawing.Font("Bernard MT Condensed", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitulo.BackColor = System.Drawing.Color.Gray;
+            this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitulo.ForeColor = System.Drawing.Color.Black;
             this.lblTitulo.Location = new System.Drawing.Point(393, 54);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(183, 31);
+            this.lblTitulo.Size = new System.Drawing.Size(262, 31);
             this.lblTitulo.TabIndex = 2;
             this.lblTitulo.Text = "EVENTOS OCASO";
             // 
@@ -97,7 +97,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Tan;
+            this.label2.BackColor = System.Drawing.Color.Gray;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 15F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(42, 114);
             this.label2.Name = "label2";
@@ -108,7 +108,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Tan;
+            this.label3.BackColor = System.Drawing.Color.Gray;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 15F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(90, 206);
             this.label3.Name = "label3";
@@ -119,7 +119,7 @@
             // lblFecha
             // 
             this.lblFecha.AutoSize = true;
-            this.lblFecha.BackColor = System.Drawing.Color.Tan;
+            this.lblFecha.BackColor = System.Drawing.Color.Gray;
             this.lblFecha.Font = new System.Drawing.Font("Segoe UI", 15F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFecha.Location = new System.Drawing.Point(129, 257);
             this.lblFecha.Name = "lblFecha";
@@ -188,7 +188,7 @@
             this.btnPlanificacion.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Chocolate;
             this.btnPlanificacion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPlanificacion.Font = new System.Drawing.Font("Segoe UI", 15F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPlanificacion.ForeColor = System.Drawing.Color.Tan;
+            this.btnPlanificacion.ForeColor = System.Drawing.Color.Transparent;
             this.btnPlanificacion.Location = new System.Drawing.Point(583, 483);
             this.btnPlanificacion.Name = "btnPlanificacion";
             this.btnPlanificacion.Size = new System.Drawing.Size(169, 46);
@@ -212,7 +212,7 @@
             // lblHora
             // 
             this.lblHora.AutoSize = true;
-            this.lblHora.BackColor = System.Drawing.Color.Tan;
+            this.lblHora.BackColor = System.Drawing.Color.Gray;
             this.lblHora.Font = new System.Drawing.Font("Segoe UI", 15F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHora.Location = new System.Drawing.Point(135, 306);
             this.lblHora.Name = "lblHora";
@@ -233,7 +233,7 @@
             // lblDescripcionEvento
             // 
             this.lblDescripcionEvento.AutoSize = true;
-            this.lblDescripcionEvento.BackColor = System.Drawing.Color.Tan;
+            this.lblDescripcionEvento.BackColor = System.Drawing.Color.Gray;
             this.lblDescripcionEvento.Font = new System.Drawing.Font("Segoe UI", 15F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDescripcionEvento.Location = new System.Drawing.Point(588, 119);
             this.lblDescripcionEvento.Name = "lblDescripcionEvento";
@@ -245,7 +245,7 @@
             // lblAproxInv
             // 
             this.lblAproxInv.AutoSize = true;
-            this.lblAproxInv.BackColor = System.Drawing.Color.Tan;
+            this.lblAproxInv.BackColor = System.Drawing.Color.Gray;
             this.lblAproxInv.Font = new System.Drawing.Font("Segoe UI", 15F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAproxInv.Location = new System.Drawing.Point(31, 351);
             this.lblAproxInv.Name = "lblAproxInv";
@@ -265,7 +265,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Tan;
+            this.label4.BackColor = System.Drawing.Color.Gray;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 15F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(29, 159);
             this.label4.Name = "label4";

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace wEventosSociales
 {
-    internal class clsLeerEnDB
+    internal class clsLeerEnDB : clsConexion
     {
     }
 }

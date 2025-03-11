@@ -32,15 +32,15 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.volverToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dtgInvitados = new System.Windows.Forms.DataGridView();
+            this.intCodigoInvitado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.columNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.columCorreo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.columTelefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnLimpiarDatos = new System.Windows.Forms.Button();
             this.btnCargarCorreos = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.btnSubirLista = new System.Windows.Forms.Button();
-            this.intCodigoInvitado = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.columNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.columCorreo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.columTelefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgInvitados)).BeginInit();
             this.SuspendLayout();
@@ -76,6 +76,30 @@
             this.dtgInvitados.Size = new System.Drawing.Size(528, 244);
             this.dtgInvitados.TabIndex = 1;
             this.dtgInvitados.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgInvitados_CellContentClick);
+            // 
+            // intCodigoInvitado
+            // 
+            this.intCodigoInvitado.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.intCodigoInvitado.HeaderText = "ID";
+            this.intCodigoInvitado.Name = "intCodigoInvitado";
+            // 
+            // columNombre
+            // 
+            this.columNombre.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.columNombre.HeaderText = "Nombre";
+            this.columNombre.Name = "columNombre";
+            // 
+            // columCorreo
+            // 
+            this.columCorreo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.columCorreo.HeaderText = "Correo Electronico";
+            this.columCorreo.Name = "columCorreo";
+            // 
+            // columTelefono
+            // 
+            this.columTelefono.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.columTelefono.HeaderText = "Telefono";
+            this.columTelefono.Name = "columTelefono";
             // 
             // btnLimpiarDatos
             // 
@@ -116,6 +140,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Gray;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 15F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(287, 68);
             this.label1.Name = "label1";
@@ -158,30 +183,6 @@
             this.btnSubirLista.Text = "Subir Lista";
             this.btnSubirLista.UseVisualStyleBackColor = false;
             this.btnSubirLista.Click += new System.EventHandler(this.btnSubirLista_Click);
-            // 
-            // intCodigoInvitado
-            // 
-            this.intCodigoInvitado.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.intCodigoInvitado.HeaderText = "ID";
-            this.intCodigoInvitado.Name = "intCodigoInvitado";
-            // 
-            // columNombre
-            // 
-            this.columNombre.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.columNombre.HeaderText = "Nombre";
-            this.columNombre.Name = "columNombre";
-            // 
-            // columCorreo
-            // 
-            this.columCorreo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.columCorreo.HeaderText = "Correo Electronico";
-            this.columCorreo.Name = "columCorreo";
-            // 
-            // columTelefono
-            // 
-            this.columTelefono.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.columTelefono.HeaderText = "Telefono";
-            this.columTelefono.Name = "columTelefono";
             // 
             // FormGestionInvitados
             // 

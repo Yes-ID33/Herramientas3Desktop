@@ -41,6 +41,8 @@
             this.menuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.inicioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cerrarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.button1 = new System.Windows.Forms.Button();
+            this.btnHistorialEve = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -48,10 +50,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.BackColor = System.Drawing.Color.Gray;
+            this.label1.Font = new System.Drawing.Font("Segoe UI Black", 17.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(103, 41);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(182, 29);
+            this.label1.Size = new System.Drawing.Size(187, 31);
             this.label1.TabIndex = 0;
             this.label1.Text = "Lista De Tareas";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -59,27 +62,30 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(463, 41);
+            this.label2.BackColor = System.Drawing.Color.Gray;
+            this.label2.Font = new System.Drawing.Font("Segoe UI Black", 17.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(449, 41);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(262, 29);
+            this.label2.Size = new System.Drawing.Size(276, 31);
             this.label2.TabIndex = 1;
             this.label2.Text = "Agenda De Actividades";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(850, 41);
+            this.label3.BackColor = System.Drawing.Color.Gray;
+            this.label3.Font = new System.Drawing.Font("Segoe UI Black", 17.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(820, 41);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(234, 29);
+            this.label3.Size = new System.Drawing.Size(246, 31);
             this.label3.TabIndex = 2;
             this.label3.Text = "Gestion De Invitados";
             // 
             // txtInfoTareas
             // 
+            this.txtInfoTareas.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.txtInfoTareas.Font = new System.Drawing.Font("Segoe UI Emoji", 11.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtInfoTareas.Location = new System.Drawing.Point(39, 82);
+            this.txtInfoTareas.Location = new System.Drawing.Point(44, 98);
             this.txtInfoTareas.Multiline = true;
             this.txtInfoTareas.Name = "txtInfoTareas";
             this.txtInfoTareas.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
@@ -90,8 +96,9 @@
             // 
             // textBox1
             // 
+            this.textBox1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.textBox1.Font = new System.Drawing.Font("Segoe UI Emoji", 11.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(422, 82);
+            this.textBox1.Location = new System.Drawing.Point(422, 98);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
@@ -101,8 +108,9 @@
             // 
             // textBox2
             // 
+            this.textBox2.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.textBox2.Font = new System.Drawing.Font("Segoe UI Emoji", 11.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(795, 82);
+            this.textBox2.Location = new System.Drawing.Point(793, 98);
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
             this.textBox2.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
@@ -112,24 +120,27 @@
             // 
             // btnReservarEventos
             // 
-            this.btnReservarEventos.Font = new System.Drawing.Font("Microsoft Sans Serif", 21F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReservarEventos.Location = new System.Drawing.Point(433, 493);
+            this.btnReservarEventos.BackColor = System.Drawing.Color.Black;
+            this.btnReservarEventos.Font = new System.Drawing.Font("Segoe UI Black", 21F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReservarEventos.ForeColor = System.Drawing.Color.Transparent;
+            this.btnReservarEventos.Location = new System.Drawing.Point(322, 486);
             this.btnReservarEventos.Name = "btnReservarEventos";
-            this.btnReservarEventos.Size = new System.Drawing.Size(314, 71);
+            this.btnReservarEventos.Size = new System.Drawing.Size(297, 71);
             this.btnReservarEventos.TabIndex = 6;
             this.btnReservarEventos.Text = "Reservar Eventos";
             this.btnReservarEventos.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnReservarEventos.UseVisualStyleBackColor = true;
+            this.btnReservarEventos.UseVisualStyleBackColor = false;
             this.btnReservarEventos.Click += new System.EventHandler(this.btnReservarEventos_Click);
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(433, 493);
+            this.pictureBox1.Location = new System.Drawing.Point(276, 486);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(74, 71);
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // menuStrip1
             // 
@@ -153,16 +164,43 @@
             // inicioToolStripMenuItem
             // 
             this.inicioToolStripMenuItem.Name = "inicioToolStripMenuItem";
-            this.inicioToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.inicioToolStripMenuItem.Size = new System.Drawing.Size(106, 22);
             this.inicioToolStripMenuItem.Text = "&Inicio";
             this.inicioToolStripMenuItem.Click += new System.EventHandler(this.inicioToolStripMenuItem_Click);
             // 
             // cerrarToolStripMenuItem
             // 
             this.cerrarToolStripMenuItem.Name = "cerrarToolStripMenuItem";
-            this.cerrarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.cerrarToolStripMenuItem.Size = new System.Drawing.Size(106, 22);
             this.cerrarToolStripMenuItem.Text = "&Cerrar";
             this.cerrarToolStripMenuItem.Click += new System.EventHandler(this.cerrarToolStripMenuItem_Click);
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Black;
+            this.button1.Font = new System.Drawing.Font("Segoe UI Black", 21F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.Transparent;
+            this.button1.Location = new System.Drawing.Point(1141, 576);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(264, 71);
+            this.button1.TabIndex = 9;
+            this.button1.Text = "Historial";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // btnHistorialEve
+            // 
+            this.btnHistorialEve.BackColor = System.Drawing.Color.Black;
+            this.btnHistorialEve.Font = new System.Drawing.Font("Segoe UI Black", 21F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHistorialEve.ForeColor = System.Drawing.Color.Transparent;
+            this.btnHistorialEve.Location = new System.Drawing.Point(625, 486);
+            this.btnHistorialEve.Name = "btnHistorialEve";
+            this.btnHistorialEve.Size = new System.Drawing.Size(301, 71);
+            this.btnHistorialEve.TabIndex = 10;
+            this.btnHistorialEve.Text = "Historial de eventos";
+            this.btnHistorialEve.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnHistorialEve.UseVisualStyleBackColor = false;
+            this.btnHistorialEve.Click += new System.EventHandler(this.btnHistorialEve_Click);
             // 
             // FormInfoApp
             // 
@@ -171,6 +209,8 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1170, 569);
+            this.Controls.Add(this.btnHistorialEve);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label3);
@@ -206,5 +246,7 @@
         private System.Windows.Forms.ToolStripMenuItem menuToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem inicioToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cerrarToolStripMenuItem;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnHistorialEve;
     }
 }
