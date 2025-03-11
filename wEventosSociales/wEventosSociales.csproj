@@ -46,104 +46,104 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="clsConexion.cs" />
-    <Compile Include="clsCSV.cs" />
-    <Compile Include="clsDatosCompartidos.cs" />
-    <Compile Include="clsEliminarEnDB.cs" />
-    <Compile Include="clsGuardarBD.cs" />
-    <Compile Include="clsHistorial.cs" />
-    <Compile Include="clsInvitado.cs" />
-    <Compile Include="clsLeerEnDB.cs" />
-    <Compile Include="Form1.cs">
+    <Compile Include="Model\clsConexion.cs" />
+    <Compile Include="Controller\clsCSV.cs" />
+    <Compile Include="Controller\clsDatosCompartidos.cs" />
+    <Compile Include="Model\clsEliminarEnDB.cs" />
+    <Compile Include="Model\clsGuardarBD.cs" />
+    <Compile Include="Controller\clsHistorial.cs" />
+    <Compile Include="Controller\clsInvitado.cs" />
+    <Compile Include="Model\clsLeerEnDB.cs" />
+    <Compile Include="View\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
+    <Compile Include="View\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="formGestionInvitados.cs">
+    <Compile Include="View\formGestionInvitados.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="formGestionInvitados.Designer.cs">
+    <Compile Include="View\formGestionInvitados.Designer.cs">
       <DependentUpon>formGestionInvitados.cs</DependentUpon>
     </Compile>
-    <Compile Include="formHistorialEventos.cs">
+    <Compile Include="View\formHistorialEventos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="formHistorialEventos.Designer.cs">
+    <Compile Include="View\formHistorialEventos.Designer.cs">
       <DependentUpon>formHistorialEventos.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormInfoApp.cs">
+    <Compile Include="View\FormInfoApp.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormInfoApp.Designer.cs">
+    <Compile Include="View\FormInfoApp.Designer.cs">
       <DependentUpon>FormInfoApp.cs</DependentUpon>
     </Compile>
-    <Compile Include="formInicio.cs">
+    <Compile Include="View\formInicio.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="formInicio.Designer.cs">
+    <Compile Include="View\formInicio.Designer.cs">
       <DependentUpon>formInicio.cs</DependentUpon>
     </Compile>
-    <Compile Include="formListaTareas.cs">
+    <Compile Include="View\formListaTareas.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="formListaTareas.Designer.cs">
+    <Compile Include="View\formListaTareas.Designer.cs">
       <DependentUpon>formListaTareas.cs</DependentUpon>
     </Compile>
-    <Compile Include="formLogin.cs">
+    <Compile Include="View\formLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="formLogin.Designer.cs">
+    <Compile Include="View\formLogin.Designer.cs">
       <DependentUpon>formLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="formPlanificacion.cs">
+    <Compile Include="View\formPlanificacion.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="formPlanificacion.Designer.cs">
+    <Compile Include="View\formPlanificacion.Designer.cs">
       <DependentUpon>formPlanificacion.cs</DependentUpon>
     </Compile>
-    <Compile Include="formPlanificacionActividades.cs">
+    <Compile Include="View\formPlanificacionActividades.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="formPlanificacionActividades.Designer.cs">
+    <Compile Include="View\formPlanificacionActividades.Designer.cs">
       <DependentUpon>formPlanificacionActividades.cs</DependentUpon>
     </Compile>
-    <Compile Include="formRegister.cs">
+    <Compile Include="View\formRegister.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="formRegister.Designer.cs">
+    <Compile Include="View\formRegister.Designer.cs">
       <DependentUpon>formRegister.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
+    <EmbeddedResource Include="View\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="formGestionInvitados.resx">
+    <EmbeddedResource Include="View\formGestionInvitados.resx">
       <DependentUpon>formGestionInvitados.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="formHistorialEventos.resx">
+    <EmbeddedResource Include="View\formHistorialEventos.resx">
       <DependentUpon>formHistorialEventos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormInfoApp.resx">
+    <EmbeddedResource Include="View\FormInfoApp.resx">
       <DependentUpon>FormInfoApp.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="formInicio.resx">
+    <EmbeddedResource Include="View\formInicio.resx">
       <DependentUpon>formInicio.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="formListaTareas.resx">
+    <EmbeddedResource Include="View\formListaTareas.resx">
       <DependentUpon>formListaTareas.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="formLogin.resx">
+    <EmbeddedResource Include="View\formLogin.resx">
       <DependentUpon>formLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="formPlanificacion.resx">
+    <EmbeddedResource Include="View\formPlanificacion.resx">
       <DependentUpon>formPlanificacion.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="formPlanificacionActividades.resx">
+    <EmbeddedResource Include="View\formPlanificacionActividades.resx">
       <DependentUpon>formPlanificacionActividades.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="formRegister.resx">
+    <EmbeddedResource Include="View\formRegister.resx">
       <DependentUpon>formRegister.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
