@@ -43,5 +43,10 @@ namespace wEventosSociales
         {
             Application.Exit();
         }
+
+        private void txtContraseniaDos_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

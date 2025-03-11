@@ -17,7 +17,7 @@ namespace wEventosSociales
 {
     public partial class FormCrearEvento : Form
     {
-        private clsGuardarDB evento = new clsGuardarDB(); // Declaración del objeto clsEvento
+        private clsGuardarBD evento = new clsGuardarBD(); // Declaración del objeto clsEvento
         private clsDatosCompartidos datosCompartidos = new clsDatosCompartidos(); // Declaración del objeto clsDatosCompartidos
 
         public FormCrearEvento()

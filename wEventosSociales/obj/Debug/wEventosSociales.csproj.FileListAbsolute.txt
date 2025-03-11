@@ -1,0 +1,14 @@
+D:\HP3 12-2\Herramientas3Desktop-master\wEventosSociales\obj\Debug\wEventosSociales.csproj.AssemblyReference.cache
+D:\HP3 12-2\Herramientas3Desktop-master\wEventosSociales\obj\Debug\wEventosSociales.FormCrearEvento.resources
+D:\HP3 12-2\Herramientas3Desktop-master\wEventosSociales\obj\Debug\wEventosSociales.FormGestionInvitados.resources
+D:\HP3 12-2\Herramientas3Desktop-master\wEventosSociales\obj\Debug\wEventosSociales.FormHistorialEventos.resources
+D:\HP3 12-2\Herramientas3Desktop-master\wEventosSociales\obj\Debug\wEventosSociales.FormInfoApp.resources
+D:\HP3 12-2\Herramientas3Desktop-master\wEventosSociales\obj\Debug\wEventosSociales.FormInicio.resources
+D:\HP3 12-2\Herramientas3Desktop-master\wEventosSociales\obj\Debug\wEventosSociales.FormListaTareas.resources
+D:\HP3 12-2\Herramientas3Desktop-master\wEventosSociales\obj\Debug\wEventosSociales.formLogin.resources
+D:\HP3 12-2\Herramientas3Desktop-master\wEventosSociales\obj\Debug\wEventosSociales.FormPlanificacion.resources
+D:\HP3 12-2\Herramientas3Desktop-master\wEventosSociales\obj\Debug\wEventosSociales.FormPlanificacionActividades.resources
+D:\HP3 12-2\Herramientas3Desktop-master\wEventosSociales\obj\Debug\wEventosSociales.formRegister.resources
+D:\HP3 12-2\Herramientas3Desktop-master\wEventosSociales\obj\Debug\wEventosSociales.Properties.Resources.resources
+D:\HP3 12-2\Herramientas3Desktop-master\wEventosSociales\obj\Debug\wEventosSociales.csproj.GenerateResource.cache
+D:\HP3 12-2\Herramientas3Desktop-master\wEventosSociales\obj\Debug\wEventosSociales.csproj.CoreCompileInputs.cache

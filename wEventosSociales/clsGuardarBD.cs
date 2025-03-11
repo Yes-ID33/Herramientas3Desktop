@@ -16,11 +16,12 @@ namespace wEventosSociales
             public string correo { get; set; }
             public string contrasenaEncriptada { get; set; }
             public int codEvento { get; set; }
-            public DateTime fecha { get; set; }
-            public TimeSpan hora { get; set; }
-            public string ubicacion { get; set; }
-            public int invitadosAprox { get; set; }
-            public string descripcion { get; set; }
+            public string TipoEvento { get; set; }
+            public DateTime datFecha { get; set; }
+            public TimeSpan datHora { get; set; }
+            public string strUbicacion { get; set; }
+            public int intInvitadosAprox { get; set; }
+            public string strDescripcion { get; set; }
             public int codNivel { get; set; }
             public string descripcionTarea { get; set; }
 
@@ -80,11 +81,11 @@ namespace wEventosSociales
                     string insertarEvento = "INSERT INTO tblEvento (fecha, hora, ubicacion, invitados_aprox, descripcion, cod_usuario) VALUES (@fecha, @hora, @ubicacion, @invitadosAprox, @descripcion, @codUsuario)";
                     SqlCommand cmdEvento = new SqlCommand(insertarEvento, conexion);
 
-                    cmdEvento.Parameters.AddWithValue("@fecha", this.fecha);
-                    cmdEvento.Parameters.AddWithValue("@hora", this.hora);
-                    cmdEvento.Parameters.AddWithValue("@ubicacion", this.ubicacion);
-                    cmdEvento.Parameters.AddWithValue("@invitadosAprox", this.invitadosAprox);
-                    cmdEvento.Parameters.AddWithValue("@descripcion", this.descripcion);
+                    cmdEvento.Parameters.AddWithValue("@fecha", this.datFecha);
+                    cmdEvento.Parameters.AddWithValue("@hora", this.datHora);
+                    cmdEvento.Parameters.AddWithValue("@ubicacion", this.strUbicacion);
+                    cmdEvento.Parameters.AddWithValue("@invitadosAprox", this.intInvitadosAprox);
+                    cmdEvento.Parameters.AddWithValue("@descripcion", this.strDescripcion);
                     cmdEvento.Parameters.AddWithValue("@codUsuario", this.codUsuario);
                     await cmdEvento.ExecuteNonQueryAsync();
 
@@ -96,11 +97,11 @@ namespace wEventosSociales
 
                     cmdHistorial.Parameters.AddWithValue("@codEvento", ultimoCodEvento);
                     cmdHistorial.Parameters.AddWithValue("@codUsuario", this.codUsuario);
-                    cmdHistorial.Parameters.AddWithValue("@fecha", this.fecha);
-                    cmdHistorial.Parameters.AddWithValue("@hora", this.hora);
-                    cmdHistorial.Parameters.AddWithValue("@ubicacion", this.ubicacion);
-                    cmdHistorial.Parameters.AddWithValue("@invitadosAprox", this.invitadosAprox);
-                    cmdHistorial.Parameters.AddWithValue("@descripcion", this.descripcion);
+                    cmdHistorial.Parameters.AddWithValue("@fecha", this.datFecha);
+                    cmdHistorial.Parameters.AddWithValue("@hora", this.datHora);
+                    cmdHistorial.Parameters.AddWithValue("@ubicacion", this.strUbicacion);
+                    cmdHistorial.Parameters.AddWithValue("@invitadosAprox", this.intInvitadosAprox);
+                    cmdHistorial.Parameters.AddWithValue("@descripcion", this.strDescripcion);
                     await cmdHistorial.ExecuteNonQueryAsync();
 
                     string insertarTareaEvento = "INSERT INTO tblTareaEvento (cod_evento, descripcion_tarea, cod_nivel) VALUES (@codEvento, @descripcionTarea, @codNivel)";

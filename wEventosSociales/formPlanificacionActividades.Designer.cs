@@ -69,7 +69,7 @@
             // 
             // dgvActividades
             // 
-            this.dgvActividades.BackgroundColor = System.Drawing.SystemColors.GrayText;
+            this.dgvActividades.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
             this.dgvActividades.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvActividades.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.columActividades,
@@ -102,7 +102,7 @@
             // lblActividades
             // 
             this.lblActividades.AutoSize = true;
-            this.lblActividades.BackColor = System.Drawing.Color.Tan;
+            this.lblActividades.BackColor = System.Drawing.Color.Gray;
             this.lblActividades.Font = new System.Drawing.Font("Segoe UI", 15F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblActividades.Location = new System.Drawing.Point(92, 84);
             this.lblActividades.Name = "lblActividades";
@@ -113,7 +113,7 @@
             // lblAGENDA
             // 
             this.lblAGENDA.AutoSize = true;
-            this.lblAGENDA.BackColor = System.Drawing.Color.Tan;
+            this.lblAGENDA.BackColor = System.Drawing.Color.Gray;
             this.lblAGENDA.Font = new System.Drawing.Font("Segoe UI", 15F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAGENDA.Location = new System.Drawing.Point(225, 34);
             this.lblAGENDA.Name = "lblAGENDA";
@@ -124,7 +124,7 @@
             // lblUbicacion
             // 
             this.lblUbicacion.AutoSize = true;
-            this.lblUbicacion.BackColor = System.Drawing.Color.Tan;
+            this.lblUbicacion.BackColor = System.Drawing.Color.Gray;
             this.lblUbicacion.Font = new System.Drawing.Font("Segoe UI", 15F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUbicacion.Location = new System.Drawing.Point(107, 144);
             this.lblUbicacion.Name = "lblUbicacion";
@@ -145,7 +145,7 @@
             // lblHora
             // 
             this.lblHora.AutoSize = true;
-            this.lblHora.BackColor = System.Drawing.Color.Tan;
+            this.lblHora.BackColor = System.Drawing.Color.Gray;
             this.lblHora.Font = new System.Drawing.Font("Segoe UI", 15F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHora.Location = new System.Drawing.Point(420, 118);
             this.lblHora.Name = "lblHora";

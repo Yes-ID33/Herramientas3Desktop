@@ -61,5 +61,19 @@ namespace wEventosSociales
         {
             Application.Exit();
         }
+
+      
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnHistorialEve_Click(object sender, EventArgs e)
+        {
+            FormHistorialEventos formHistorial = new FormHistorialEventos(); 
+            formHistorial.Show();
+            this.Close();
+        }
     }
 }

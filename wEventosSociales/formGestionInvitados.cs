@@ -128,7 +128,7 @@ namespace wEventosSociales
                     if (row.Cells[0].Value != null && row.Cells[1].Value != null && row.Cells[2].Value != null && row.Cells[3].Value != null)
                     {
                         int intCodigoInvitado = totalInvitados + Convert.ToInt32(row.Cells[0].Value);
-                        int intCodigoEvento = this.evento.intCodigoEvento; // Suponiendo que este es el código del evento
+                        int intCodigoEvento = this.evento.codEvento; // Suponiendo que este es el código del evento
                         string strNombre = row.Cells[1].Value.ToString();
                         string strCorreo = row.Cells[2].Value.ToString();
                         long intTelefono = Convert.ToInt64(row.Cells[3].Value);

@@ -10,10 +10,13 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using wEventosSociales;
 
+
 namespace wEventosSociales
 {
-    public partial class FormHistorialEventos : Form
+    public partial class FormHistorialEventos : Form 
     {
+        public string nombreUsuario = null;
+
         public FormHistorialEventos()
         {
             InitializeComponent();
@@ -35,17 +38,17 @@ namespace wEventosSociales
             CargarImagenEvento(0);
         }
 
-        private void btnEliminar_Click(object sender, EventArgs e)
+        private async void btnEliminar_Click(object sender, EventArgs e)
         {
             try
             {
                 // Verificar si el texto del código se puede convertir a un entero
                 if (int.TryParse(txtCodigo.Text, out int codigoEvento))
                 {
-                    clsGuardarBD p1 = new clsGuardarBD();
+                    clsEliminarEnDB p1 = new clsEliminarEnDB();
 
                     // Llamar al método eliminarDato con el código del evento
-                    if (p1.eliminarDato(codigoEvento))
+                    if (await p1.EliminarEventoAsync(codigoEvento, nombreUsuario))
                     {
                         MessageBox.Show("Registro eliminado correctamente.");
 
@@ -308,7 +311,6 @@ namespace wEventosSociales
             // Configurar el PictureBox en modo StretchImage
             ptbEvento.SizeMode = PictureBoxSizeMode.StretchImage;
         }
-
         private void dtgHistorial_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 

@@ -67,10 +67,11 @@
             // lblAGENDA
             // 
             this.lblAGENDA.AutoSize = true;
-            this.lblAGENDA.Font = new System.Drawing.Font("Bernard MT Condensed", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAGENDA.BackColor = System.Drawing.Color.Gray;
+            this.lblAGENDA.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAGENDA.Location = new System.Drawing.Point(195, 47);
             this.lblAGENDA.Name = "lblAGENDA";
-            this.lblAGENDA.Size = new System.Drawing.Size(421, 31);
+            this.lblAGENDA.Size = new System.Drawing.Size(568, 31);
             this.lblAGENDA.TabIndex = 17;
             this.lblAGENDA.Text = "REGISTRO DE HISTORIAL DE EVENTOS";
             // 
@@ -103,6 +104,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Gray;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 15F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(778, 325);
             this.label1.Name = "label1";
@@ -113,6 +115,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Gray;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 15F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(30, 99);
             this.label2.Name = "label2";
@@ -138,7 +141,7 @@
             this.btnMostrarEvento.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Chocolate;
             this.btnMostrarEvento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMostrarEvento.Font = new System.Drawing.Font("Segoe UI", 15F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMostrarEvento.ForeColor = System.Drawing.Color.Tan;
+            this.btnMostrarEvento.ForeColor = System.Drawing.Color.Transparent;
             this.btnMostrarEvento.Location = new System.Drawing.Point(787, 209);
             this.btnMostrarEvento.Name = "btnMostrarEvento";
             this.btnMostrarEvento.Size = new System.Drawing.Size(181, 49);
@@ -187,6 +190,7 @@
             // 
             // label3
             // 
+            this.label3.BackColor = System.Drawing.Color.Gray;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(1014, 127);
             this.label3.Name = "label3";
@@ -196,7 +200,7 @@
             // 
             // dtgInvitadosHistorial
             // 
-            this.dtgInvitadosHistorial.BackgroundColor = System.Drawing.SystemColors.GrayText;
+            this.dtgInvitadosHistorial.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
             this.dtgInvitadosHistorial.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgInvitadosHistorial.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.intCodigoInvitado,
@@ -256,6 +260,7 @@
             // 
             // label4
             // 
+            this.label4.BackColor = System.Drawing.Color.Gray;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(783, 127);
             this.label4.Name = "label4";
@@ -265,7 +270,7 @@
             // 
             // dtgHistorial
             // 
-            this.dtgHistorial.BackgroundColor = System.Drawing.SystemColors.GrayText;
+            this.dtgHistorial.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
             this.dtgHistorial.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgHistorial.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.intCodigoHistorial,
@@ -338,6 +343,7 @@
             // lblEvento
             // 
             this.lblEvento.AutoSize = true;
+            this.lblEvento.BackColor = System.Drawing.Color.Gray;
             this.lblEvento.Font = new System.Drawing.Font("Segoe UI", 15F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEvento.Location = new System.Drawing.Point(30, 325);
             this.lblEvento.Name = "lblEvento";
@@ -351,7 +357,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Tan;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1271, 582);
             this.Controls.Add(this.dtgHistorial);
             this.Controls.Add(this.lblEvento);
