@@ -7,43 +7,39 @@ using System.Threading.Tasks;
 
 namespace wEventosSociales
 {
-    public class clsInvitado
+    public class clsInvitado : clsConexion
     {
-        public int intCodigoInvitado { get; set; }
-        public int intCodigoEvento { get; set; }
+        public int intCodInvitado { get; set; }
+        public int intCodEvento { get; set; }
         public string strNombre { get; set; }
         public string strCorreo { get; set; }
         public long intTelefono { get; set; }
 
-        public clsInvitado(int intCodigoInvitado, int intCodigoEvento, string strNombre, string strCorreo, long intTelefono)
+        public clsInvitado(int intCodInvitado, int intCodEvento, string strNombre, string strCorreo, long intTelefono)
         {
-            this.intCodigoInvitado = intCodigoInvitado;
-            this.intCodigoEvento = intCodigoEvento;
+            this.intCodInvitado = intCodInvitado;
+            this.intCodEvento = intCodEvento;
             this.strNombre = strNombre;
             this.strCorreo = strCorreo;
             this.intTelefono = intTelefono;
         }
 
-        // Método para insertar un invitado en la tabla tblInvitados
+        // Método para insertar un invitado en la tabla tblInvitado
         public bool InsertarInvitado()
         {
             try
             {
-                // Cadena de conexión
-                string connectionString = "server=B13-204-22891;database=dboCreacionEventos; integrated security=true";
-
-                using (SqlConnection conexion = new SqlConnection(connectionString))
+                using (SqlConnection conexion = new SqlConnection(cadenaConexion))
                 {
                     conexion.Open();
 
                     // Consulta SQL para insertar un invitado
-                    string insertar = "insert into tblInvitado values (@intCodigoInvitado, @intCodigoEvento, @strNombre, @strCorreo, @intTelefono)";
+                    string insertar = "INSERT INTO tblInvitado (cod_evento, nombre, correo, telefono) VALUES (@intCodEvento, @strNombre, @strCorreo, @intTelefono)";
 
                     using (SqlCommand sql = new SqlCommand(insertar, conexion))
                     {
                         // Parámetros
-                        sql.Parameters.AddWithValue("@intCodigoInvitado", this.intCodigoInvitado);
-                        sql.Parameters.AddWithValue("@intCodigoEvento", this.intCodigoEvento);
+                        sql.Parameters.AddWithValue("@intCodEvento", this.intCodEvento);
                         sql.Parameters.AddWithValue("@strNombre", this.strNombre);
                         sql.Parameters.AddWithValue("@strCorreo", this.strCorreo);
                         sql.Parameters.AddWithValue("@intTelefono", this.intTelefono);
@@ -53,7 +49,7 @@ namespace wEventosSociales
                     }
                 }
                 return true;
-            
+
             }
             catch (Exception ex)
             {
@@ -61,6 +57,6 @@ namespace wEventosSociales
                 Console.WriteLine("Error al insertar el invitado: " + ex.Message);
                 return false;
             }
-        }       
+        }
     }
 }

@@ -33,6 +33,8 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.volverToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cerrarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cerrarSesionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtDescripcionHistorial = new System.Windows.Forms.TextBox();
@@ -58,8 +60,6 @@
             this.intInvitadosAprox = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.strDescripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblEvento = new System.Windows.Forms.Label();
-            this.cerrarSesionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptbEvento)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtgInvitadosHistorial)).BeginInit();
@@ -104,6 +104,20 @@
             this.cerrarToolStripMenuItem.Name = "cerrarToolStripMenuItem";
             this.cerrarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.cerrarToolStripMenuItem.Text = "&Volver";
+            this.cerrarToolStripMenuItem.Click += new System.EventHandler(this.cerrarToolStripMenuItem_Click);
+            // 
+            // cerrarSesionToolStripMenuItem
+            // 
+            this.cerrarSesionToolStripMenuItem.Name = "cerrarSesionToolStripMenuItem";
+            this.cerrarSesionToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.cerrarSesionToolStripMenuItem.Text = "&Cerrar sesion";
+            // 
+            // salirToolStripMenuItem
+            // 
+            this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.salirToolStripMenuItem.Text = "&Salir";
+            this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
             // label1
             // 
@@ -354,19 +368,6 @@
             this.lblEvento.Size = new System.Drawing.Size(90, 28);
             this.lblEvento.TabIndex = 31;
             this.lblEvento.Text = "Eventos:";
-            // 
-            // cerrarSesionToolStripMenuItem
-            // 
-            this.cerrarSesionToolStripMenuItem.Name = "cerrarSesionToolStripMenuItem";
-            this.cerrarSesionToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.cerrarSesionToolStripMenuItem.Text = "&Cerrar sesion";
-            // 
-            // salirToolStripMenuItem
-            // 
-            this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.salirToolStripMenuItem.Text = "&Salir";
-            this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
             // FormHistorialEventos
             // 

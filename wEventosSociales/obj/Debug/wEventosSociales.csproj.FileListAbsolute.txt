@@ -31,3 +31,22 @@ C:\Users\57320\Downloads\Herramientas3DesktopFix - copia\wEventosSociales\obj\De
 C:\Users\57320\Downloads\Herramientas3DesktopFix - copia\wEventosSociales\obj\Debug\wEventosSociales.csproj.CoreCompileInputs.cache
 C:\Users\57320\Downloads\Herramientas3DesktopFix - copia\wEventosSociales\obj\Debug\wEventosSociales.exe
 C:\Users\57320\Downloads\Herramientas3DesktopFix - copia\wEventosSociales\obj\Debug\wEventosSociales.pdb
+C:\HP3\Herramientas3Desktop\wEventosSociales\bin\Debug\wEventosSociales.exe.config
+C:\HP3\Herramientas3Desktop\wEventosSociales\bin\Debug\wEventosSociales.exe
+C:\HP3\Herramientas3Desktop\wEventosSociales\bin\Debug\wEventosSociales.pdb
+C:\HP3\Herramientas3Desktop\wEventosSociales\obj\Debug\wEventosSociales.csproj.AssemblyReference.cache
+C:\HP3\Herramientas3Desktop\wEventosSociales\obj\Debug\wEventosSociales.FormCrearEvento.resources
+C:\HP3\Herramientas3Desktop\wEventosSociales\obj\Debug\wEventosSociales.FormGestionInvitados.resources
+C:\HP3\Herramientas3Desktop\wEventosSociales\obj\Debug\wEventosSociales.FormHistorialEventos.resources
+C:\HP3\Herramientas3Desktop\wEventosSociales\obj\Debug\wEventosSociales.FormInfoApp.resources
+C:\HP3\Herramientas3Desktop\wEventosSociales\obj\Debug\wEventosSociales.FormInicio.resources
+C:\HP3\Herramientas3Desktop\wEventosSociales\obj\Debug\wEventosSociales.FormListaTareas.resources
+C:\HP3\Herramientas3Desktop\wEventosSociales\obj\Debug\wEventosSociales.formLogin.resources
+C:\HP3\Herramientas3Desktop\wEventosSociales\obj\Debug\wEventosSociales.FormPlanificacion.resources
+C:\HP3\Herramientas3Desktop\wEventosSociales\obj\Debug\wEventosSociales.FormPlanificacionActividades.resources
+C:\HP3\Herramientas3Desktop\wEventosSociales\obj\Debug\wEventosSociales.formRegister.resources
+C:\HP3\Herramientas3Desktop\wEventosSociales\obj\Debug\wEventosSociales.Properties.Resources.resources
+C:\HP3\Herramientas3Desktop\wEventosSociales\obj\Debug\wEventosSociales.csproj.GenerateResource.cache
+C:\HP3\Herramientas3Desktop\wEventosSociales\obj\Debug\wEventosSociales.csproj.CoreCompileInputs.cache
+C:\HP3\Herramientas3Desktop\wEventosSociales\obj\Debug\wEventosSociales.exe
+C:\HP3\Herramientas3Desktop\wEventosSociales\obj\Debug\wEventosSociales.pdb

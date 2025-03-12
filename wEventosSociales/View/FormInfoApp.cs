@@ -66,7 +66,9 @@ namespace wEventosSociales
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-
+            FormCrearEvento Form1 = new FormCrearEvento();
+            Form1.Show();
+            this.Close();
         }
 
         private void btnHistorialEve_Click(object sender, EventArgs e)

@@ -9,14 +9,15 @@ namespace wEventosSociales
 {
     public class clsConexion
     {
-        private string cadenaDeConexion = "server=B13-204-22891; database=dboCreacionEventos; integrated security=true";
+        protected string cadenaConexion = "server=B13-204-22891;database=dboCreacionEventos; integrated security=true";
         protected SqlConnection conexion;
+
         public async Task ConectarAsync()
         {
-            conexion = new SqlConnection(cadenaDeConexion);
+            conexion = new SqlConnection(cadenaConexion);
             await conexion.OpenAsync();
         }
-        
+
         public void DesconectarDB()
         {
             if (conexion != null && conexion.State == System.Data.ConnectionState.Open)
@@ -25,18 +26,18 @@ namespace wEventosSociales
             }
         }
 
-        // Función para obtener el codUsuario del usuario loggeado
-        public async Task<int> GetUsuarioLoggeadoAsync(string nombreUsuario)
+        // Método para obtener el intCodUsuario del usuario loggeado
+        public async Task<int> GetUsuarioLoggeadoAsync(string strNombreUsuario)
         {
             try
             {
                 await ConectarAsync();
-                string consulta = "SELECT cod_usuario FROM tblUsuario WHERE nombre_usuario = @nombreUsuario";
+                string consulta = "SELECT cod_usuario FROM tblUsuario WHERE nombre_usuario = @strNombreUsuario";
                 SqlCommand cmd = new SqlCommand(consulta, conexion);
-                cmd.Parameters.AddWithValue("@nombreUsuario", nombreUsuario);
+                cmd.Parameters.AddWithValue("@strNombreUsuario", strNombreUsuario);
 
-                int codUsuario = Convert.ToInt32(await cmd.ExecuteScalarAsync());
-                return codUsuario;
+                int intCodUsuario = Convert.ToInt32(await cmd.ExecuteScalarAsync());
+                return intCodUsuario;
             }
             catch (Exception ex)
             {

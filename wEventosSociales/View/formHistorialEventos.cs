@@ -325,5 +325,12 @@ namespace wEventosSociales
         {
             Application.Exit();
         }
+
+        private void cerrarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            formLogin loginForm = new formLogin();
+            loginForm.Show();
+            this.Close();
+        }
     }
 }

@@ -41,11 +41,10 @@
             this.menuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.inicioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cerrarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.button1 = new System.Windows.Forms.Button();
             this.btnHistorialEve = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -168,16 +167,23 @@
             // inicioToolStripMenuItem
             // 
             this.inicioToolStripMenuItem.Name = "inicioToolStripMenuItem";
-            this.inicioToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.inicioToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
             this.inicioToolStripMenuItem.Text = "&Inicio";
             this.inicioToolStripMenuItem.Click += new System.EventHandler(this.inicioToolStripMenuItem_Click);
             // 
             // cerrarToolStripMenuItem
             // 
             this.cerrarToolStripMenuItem.Name = "cerrarToolStripMenuItem";
-            this.cerrarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.cerrarToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
             this.cerrarToolStripMenuItem.Text = "&Cerrar sesión";
             this.cerrarToolStripMenuItem.Click += new System.EventHandler(this.cerrarToolStripMenuItem_Click);
+            // 
+            // salirToolStripMenuItem
+            // 
+            this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
+            this.salirToolStripMenuItem.Text = "&Salir";
+            this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
             // button1
             // 
@@ -206,15 +212,6 @@
             this.btnHistorialEve.UseVisualStyleBackColor = false;
             this.btnHistorialEve.Click += new System.EventHandler(this.btnHistorialEve_Click);
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(633, 494);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(35, 13);
-            this.label4.TabIndex = 11;
-            this.label4.Text = "label4";
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -224,13 +221,6 @@
             this.label5.TabIndex = 12;
             this.label5.Text = "label5";
             // 
-            // salirToolStripMenuItem
-            // 
-            this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.salirToolStripMenuItem.Text = "&Salir";
-            this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
-            // 
             // FormInfoApp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -239,7 +229,6 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1170, 569);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
             this.Controls.Add(this.btnHistorialEve);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox2);
@@ -279,7 +268,6 @@
         private System.Windows.Forms.ToolStripMenuItem cerrarToolStripMenuItem;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnHistorialEve;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
     }
