@@ -27,7 +27,7 @@ namespace wEventosSociales
             InitializeComponent();
             this.evento = evento; // Asignar el objeto recibido al campo local
             this.datosCompartidos = datos; // Asignar el objeto recibido al campo local
-            tipoEvento = evento.TipoEvento; // Obtener el tipo de evento del objeto evento
+            tipoEvento = evento.strTipoEvento; // Obtener el tipo de evento del objeto evento
         }
 
         private void volverToolStripMenuItem_Click(object sender, EventArgs e)

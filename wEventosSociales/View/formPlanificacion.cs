@@ -43,10 +43,9 @@ namespace wEventosSociales
         }
 
         private void volverToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-        }
+        {}
 
-        private void btnConfirmar_Click(object sender, EventArgs e)
+        /*private void btnConfirmar_Click(object sender, EventArgs e)
         {
             // Verificar si los datos de clsDatosCompartidos son nulos o están vacíos
             if (datosCompartidos == null || string.IsNullOrEmpty(datosCompartidos.ContenidoLista) || string.IsNullOrEmpty(datosCompartidos.ContenidoActividades) || string.IsNullOrEmpty(datosCompartidos.ContenidoInvitados))
@@ -65,7 +64,7 @@ namespace wEventosSociales
             }
 
             // Mostrar mensaje de confirmación con todos los datos del evento y los datos compartidos
-            MessageBox.Show($"Tipo de Evento: {evento.TipoEvento}\n" +
+            MessageBox.Show($"Tipo de Evento: {evento.strTipoEvento}\n" +
                             $"Fecha: {evento.datFecha.ToShortDateString()}\n" +
                             $"Hora: {evento.datHora}\n" +
                             $"Ubicación: {evento.strUbicacion}\n" +
@@ -76,6 +75,49 @@ namespace wEventosSociales
                             $"Lista de Invitados:\n{datosCompartidos.ContenidoInvitados}",
                             "Datos Confirmados", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
+        Còdigo anterior, reemplazar cuando funcionen los otros formularios
+         */
+
+        private async void btnConfirmar_Click(object sender, EventArgs e)
+        {
+            // Verificar si los datos del evento son nulos
+            if (evento == null)
+            {
+                // Mostrar un mensaje de advertencia si las variables son nulas
+                MessageBox.Show("Error al obtener los datos del evento. Por favor, asegúrate de que los datos estén disponibles.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            // Asignar los datos del formulario al objeto evento para guardarlos en la base de datos
+            evento.strTipoEvento = this.evento.strTipoEvento;
+            evento.datFecha = this.evento.datFecha;
+            evento.datHora = this.evento.datHora;
+            evento.strUbicacion = this.evento.strUbicacion;
+            evento.intInvitadosAprox = this.evento.intInvitadosAprox;
+            evento.strDescripcion = this.evento.strDescripcion;
+            evento.intCodUsuario = this.evento.intCodUsuario; // Este dato debe estar definido para poder ser insertado
+
+            // Intentar guardar el evento en la base de datos
+            bool eventoGuardado = await evento.InsertarEventoAsync();
+            if (eventoGuardado)
+            {
+                MessageBox.Show("El evento ha sido guardado correctamente en la base de datos.", "Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show("Hubo un error al guardar el evento. Intenta nuevamente.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            // Mostrar mensaje de confirmación con todos los datos del evento
+            MessageBox.Show($"Tipo de Evento: {evento.strTipoEvento}\n" +
+                            $"Fecha: {evento.datFecha.ToShortDateString()}\n" +
+                            $"Hora: {evento.datHora}\n" +
+                            $"Ubicación: {evento.strUbicacion}\n" +
+                            $"Invitados Aproximados: {evento.intInvitadosAprox}\n" +
+                            $"Descripción: {evento.strDescripcion}",
+                            "Datos Confirmados", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
 
         // Método para guardar los datos en la base de datos (este es solo un ejemplo, deberías implementarlo según tus necesidades)
 

@@ -57,3 +57,6 @@ CREATE TABLE tblEventoUsuario (
     cod_usuario INT NOT NULL FOREIGN KEY REFERENCES tblUsuario(cod_usuario),
     PRIMARY KEY (cod_evento, cod_usuario)
 );
+
+insert into tblUsuario values
+('Julian Betancurt', 'ju@gmail.co', 1234)

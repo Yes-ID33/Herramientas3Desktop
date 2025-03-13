@@ -31,14 +31,15 @@ namespace wEventosSociales
 
         private void volverToolStripMenuItem_Click(object sender, EventArgs e)
         {
-        
+
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             if (dtgInvitados.Rows[dtgInvitados.CurrentCell.RowIndex].Cells[1].Value != null &&
                 !string.IsNullOrWhiteSpace(dtgInvitados.Rows[dtgInvitados.CurrentCell.RowIndex].Cells[0].Value.ToString()))
-            {
+            { //aquì hay que añadir otro if de tal manera que si las columnas columnCorreo y columnTelefono tienen valores, que se añadan esos valores,
+                //pero que el correo tenga un check al menos que haya un "@" en el campo y que el nùmero de telefono sea de 10 dìgitos 
                 Random rnd = new Random();
                 string telefono = "3" + rnd.Next(100000000, 999999999).ToString(); // Genera un número de teléfono aleatorio que comienza con 3
                 string nombre = dtgInvitados.Rows[dtgInvitados.CurrentCell.RowIndex].Cells[1].Value.ToString();
@@ -128,7 +129,7 @@ namespace wEventosSociales
                     if (row.Cells[0].Value != null && row.Cells[1].Value != null && row.Cells[2].Value != null && row.Cells[3].Value != null)
                     {
                         int intCodigoInvitado = totalInvitados + Convert.ToInt32(row.Cells[0].Value);
-                        int intCodigoEvento = this.evento.codEvento; // Suponiendo que este es el código del evento
+                        int intCodigoEvento = this.evento.intCodEvento; // Suponiendo que este es el código del evento
                         string strNombre = row.Cells[1].Value.ToString();
                         string strCorreo = row.Cells[2].Value.ToString();
                         long intTelefono = Convert.ToInt64(row.Cells[3].Value);
@@ -211,6 +212,11 @@ namespace wEventosSociales
         }
 
         private void inciarSesionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void cerrarSesionToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
         }

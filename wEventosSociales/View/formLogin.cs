@@ -20,35 +20,57 @@ namespace wEventosSociales
         }
         SqlConnection conexion = new SqlConnection("server=");
 
-        private void button1_Click(object sender, EventArgs e)
+        private async void btnEntrar_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void btnEntrar_Click(object sender, EventArgs e)
-        {
-            FormInfoApp formInfoApp = new FormInfoApp();
-            formInfoApp.Show();
-            this.Close();
-            /*conexion.Open();
-            String consulta = "select = from Usario where Usuario='" + txtUsuario.Text + "' and Contraseña='" + txtContrasenia.Text + "'";
-            SqlCommand comando = new SqlCommand(consulta, conexion);
-            SqlDataReader lector;
-            lector = comando.EndExecuteReader();
-
-            if (lector.HasRows == true)
+            // Validar si el usuario y la contraseña están vacíos
+            if (string.IsNullOrEmpty(txtUsuario.Text) || string.IsNullOrEmpty(txtContrasenia.Text))
             {
-                MessageBox.Show("bienvenido");
-                //Form2 form2 = new Form2.show();
-                this.Close();
+                MessageBox.Show("Por favor, ingresa tu usuario y contraseña", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
 
-            }
-            else
+            try
             {
-                MessageBox.Show("usuario o contraseña incorrecto o no tienes cuenta");
+                // Abrir la conexión
+                await conexion.OpenAsync();
+
+                // Consulta para verificar usuario y contraseña
+                string consulta = "SELECT cod_usuario, nombre_usuario FROM tblUsuario WHERE correo = @correo AND contrasena_encriptada = @contrasena";
+                SqlCommand comando = new SqlCommand(consulta, conexion);
+                comando.Parameters.AddWithValue("@correo", txtUsuario.Text);
+                comando.Parameters.AddWithValue("@contrasena", txtContrasenia.Text);
+
+                SqlDataReader lector = await comando.ExecuteReaderAsync();
+
+                if (lector.HasRows)
+                {
+                    // Si se encuentra el usuario, cerramos el login y mostramos la aplicación principal
+                    lector.Read();  // Leer el primer (y único) resultado
+                    int codUsuario = lector.GetInt32(0);
+                    string nombreUsuario = lector.GetString(1);
+
+                    MessageBox.Show($"Bienvenido {nombreUsuario}!", "Inicio de sesión exitoso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    // Abre la ventana principal
+                    FormInfoApp formInfoApp = new FormInfoApp();  // Pasa el codUsuario para mantenerlo disponible
+                    formInfoApp.Show();
+                    this.Close();  // Cierra el formulario de login
+                }
+                else
+                {
+                    MessageBox.Show("Usuario o contraseña incorrectos.", "Error de inicio de sesión", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
-            conexion.Close();
-            */
+            catch (Exception ex)
+            {
+                MessageBox.Show("Hubo un error al intentar iniciar sesión: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                // Asegurarse de cerrar la conexión en cualquier caso
+                if (conexion.State == System.Data.ConnectionState.Open)
+                    conexion.Close();
+            }
         }
 
         private void btnIrCrearCuenta_Click(object sender, EventArgs e)

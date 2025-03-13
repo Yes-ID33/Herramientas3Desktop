@@ -51,16 +51,15 @@ namespace wEventosSociales
                     }
 
                     // Crear una instancia del evento con los datos ingresados
-                    evento.TipoEvento = cboTipoEvento.SelectedItem.ToString();
+                    evento.strTipoEvento = cboTipoEvento.SelectedItem.ToString();
                     evento.strUbicacion = txtUbicacion.Text;
                     evento.datFecha = dtpFecha.Value;
                     evento.datHora = dtpHora.Value.TimeOfDay;
                     evento.strDescripcion = cboTipoEvento.SelectedItem.ToString() + " \n" + txtDescripcion.Text;
                     evento.intInvitadosAprox = int.Parse(txtInvitadosAprox.Text);
-                    evento.codNivel = cboNivelEvento.SelectedIndex + 1; // Asumimos que los índices coinciden con cod_nivel
+                    evento.intCodNivel = cboNivelEvento.SelectedIndex + 1; // Asumimos que los índices coinciden con cod_nivel
 
                     // Guardar datos temporalmente
-                    evento.InsertarEventoTemporal();
 
                     // Mostrar el formulario FormPlanificacion y esconder el form actual
                     clsDatosCompartidos datosCompartidos = new clsDatosCompartidos();
@@ -117,7 +116,7 @@ namespace wEventosSociales
             }
 
             // Establecer el tipo de evento seleccionado en el objeto clsEvento
-            evento.TipoEvento = tipoEvento;
+            evento.strTipoEvento = tipoEvento;
         }
 
         private void cerrarToolStripMenuItem_Click(object sender, EventArgs e)

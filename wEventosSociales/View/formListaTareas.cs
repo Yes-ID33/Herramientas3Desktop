@@ -24,7 +24,7 @@ namespace wEventosSociales
             this.evento = evento; // Asignar el objeto recibido al campo local
             this.datosCompartidos = datos; // Asignar el objeto recibido al campo local
 
-            tipoEvento = evento.TipoEvento;
+            tipoEvento = evento.strTipoEvento;
         }
 
         private void volverToolStripMenuItem_Click(object sender, EventArgs e)

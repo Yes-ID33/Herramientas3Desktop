@@ -33,14 +33,14 @@
             this.lblTitulo = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.volverToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.volverToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.cerrarSesionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
             this.btnAgendaActividades = new System.Windows.Forms.Button();
             this.btnListaTareas = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnConfirmar = new System.Windows.Forms.Button();
-            this.volverToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.cerrarSesionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -48,6 +48,7 @@
             // btnGestionInvitados
             // 
             this.btnGestionInvitados.BackColor = System.Drawing.Color.Black;
+            this.btnGestionInvitados.Enabled = false;
             this.btnGestionInvitados.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnGestionInvitados.FlatAppearance.BorderSize = 2;
             this.btnGestionInvitados.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Thistle;
@@ -95,6 +96,25 @@
             this.volverToolStripMenuItem.Text = "&Menu";
             this.volverToolStripMenuItem.Click += new System.EventHandler(this.volverToolStripMenuItem_Click);
             // 
+            // volverToolStripMenuItem1
+            // 
+            this.volverToolStripMenuItem1.Name = "volverToolStripMenuItem1";
+            this.volverToolStripMenuItem1.Size = new System.Drawing.Size(142, 22);
+            this.volverToolStripMenuItem1.Text = "&Volver";
+            // 
+            // cerrarSesionToolStripMenuItem
+            // 
+            this.cerrarSesionToolStripMenuItem.Name = "cerrarSesionToolStripMenuItem";
+            this.cerrarSesionToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
+            this.cerrarSesionToolStripMenuItem.Text = "&Cerrar sesion";
+            // 
+            // salirToolStripMenuItem
+            // 
+            this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
+            this.salirToolStripMenuItem.Text = "&Salir";
+            this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -109,6 +129,7 @@
             // btnAgendaActividades
             // 
             this.btnAgendaActividades.BackColor = System.Drawing.Color.Black;
+            this.btnAgendaActividades.Enabled = false;
             this.btnAgendaActividades.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnAgendaActividades.FlatAppearance.BorderSize = 2;
             this.btnAgendaActividades.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightCyan;
@@ -127,6 +148,7 @@
             // btnListaTareas
             // 
             this.btnListaTareas.BackColor = System.Drawing.Color.Black;
+            this.btnListaTareas.Enabled = false;
             this.btnListaTareas.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnListaTareas.FlatAppearance.BorderSize = 2;
             this.btnListaTareas.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Ivory;
@@ -171,25 +193,6 @@
             this.btnConfirmar.Text = "ConfirmarEvento";
             this.btnConfirmar.UseVisualStyleBackColor = false;
             this.btnConfirmar.Click += new System.EventHandler(this.btnConfirmar_Click);
-            // 
-            // volverToolStripMenuItem1
-            // 
-            this.volverToolStripMenuItem1.Name = "volverToolStripMenuItem1";
-            this.volverToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
-            this.volverToolStripMenuItem1.Text = "&Volver";
-            // 
-            // cerrarSesionToolStripMenuItem
-            // 
-            this.cerrarSesionToolStripMenuItem.Name = "cerrarSesionToolStripMenuItem";
-            this.cerrarSesionToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.cerrarSesionToolStripMenuItem.Text = "&Cerrar sesion";
-            // 
-            // salirToolStripMenuItem
-            // 
-            this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.salirToolStripMenuItem.Text = "&Salir";
-            this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
             // FormPlanificacion
             // 

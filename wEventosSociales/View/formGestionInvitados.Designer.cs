@@ -31,6 +31,9 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormGestionInvitados));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.volverToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.inciarSesionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cerrarSesionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dtgInvitados = new System.Windows.Forms.DataGridView();
             this.intCodigoInvitado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.columNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -41,9 +44,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.btnSubirLista = new System.Windows.Forms.Button();
-            this.inciarSesionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cerrarSesionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgInvitados)).BeginInit();
             this.SuspendLayout();
@@ -68,6 +68,27 @@
             this.volverToolStripMenuItem.Size = new System.Drawing.Size(50, 20);
             this.volverToolStripMenuItem.Text = "&Menu";
             this.volverToolStripMenuItem.Click += new System.EventHandler(this.volverToolStripMenuItem_Click);
+            // 
+            // inciarSesionToolStripMenuItem
+            // 
+            this.inciarSesionToolStripMenuItem.Name = "inciarSesionToolStripMenuItem";
+            this.inciarSesionToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.inciarSesionToolStripMenuItem.Text = "&Volver";
+            this.inciarSesionToolStripMenuItem.Click += new System.EventHandler(this.inciarSesionToolStripMenuItem_Click);
+            // 
+            // cerrarSesionToolStripMenuItem
+            // 
+            this.cerrarSesionToolStripMenuItem.Name = "cerrarSesionToolStripMenuItem";
+            this.cerrarSesionToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.cerrarSesionToolStripMenuItem.Text = "&Cerrar sesion";
+            this.cerrarSesionToolStripMenuItem.Click += new System.EventHandler(this.cerrarSesionToolStripMenuItem_Click);
+            // 
+            // salirToolStripMenuItem
+            // 
+            this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.salirToolStripMenuItem.Text = "&Salir";
+            this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
             // dtgInvitados
             // 
@@ -190,26 +211,6 @@
             this.btnSubirLista.Text = "Subir Lista";
             this.btnSubirLista.UseVisualStyleBackColor = false;
             this.btnSubirLista.Click += new System.EventHandler(this.btnSubirLista_Click);
-            // 
-            // inciarSesionToolStripMenuItem
-            // 
-            this.inciarSesionToolStripMenuItem.Name = "inciarSesionToolStripMenuItem";
-            this.inciarSesionToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.inciarSesionToolStripMenuItem.Text = "&Volver";
-            this.inciarSesionToolStripMenuItem.Click += new System.EventHandler(this.inciarSesionToolStripMenuItem_Click);
-            // 
-            // cerrarSesionToolStripMenuItem
-            // 
-            this.cerrarSesionToolStripMenuItem.Name = "cerrarSesionToolStripMenuItem";
-            this.cerrarSesionToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.cerrarSesionToolStripMenuItem.Text = "&Cerrar sesion";
-            // 
-            // salirToolStripMenuItem
-            // 
-            this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.salirToolStripMenuItem.Text = "&Salir";
-            this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
             // FormGestionInvitados
             // 
