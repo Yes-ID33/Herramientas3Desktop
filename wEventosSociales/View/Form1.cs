@@ -94,19 +94,18 @@ namespace wEventosSociales
 
         private void cboTipoEvento_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string tipoEvento = cboTipoEvento.SelectedItem.ToString();
+            if (cboTipoEvento.SelectedItem == null)
+            {
+                return; 
+            }
+
+            string tipoEvento = cboTipoEvento.SelectedItem.ToString().Trim(); // Elimina espacios en blanco al inicio y al final
 
             switch (tipoEvento)
             {
                 case "Boda":
-                    lblDescripcionEvento.Visible = true;
-                    break;
                 case "Cumpleaños":
-                    lblDescripcionEvento.Visible = true;
-                    break;
                 case "Conferencia":
-                    lblDescripcionEvento.Visible = true;
-                    break;
                 case "Reunion":
                     lblDescripcionEvento.Visible = true;
                     break;
@@ -115,9 +114,12 @@ namespace wEventosSociales
                     break;
             }
 
-            // Establecer el tipo de evento seleccionado en el objeto clsEvento
-            evento.strTipoEvento = tipoEvento;
+            if (evento != null) // Evita error si el objeto evento no está instanciado
+            {
+                evento.strTipoEvento = tipoEvento;
+            }
         }
+
 
         private void cerrarToolStripMenuItem_Click(object sender, EventArgs e)
         {
