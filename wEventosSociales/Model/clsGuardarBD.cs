@@ -5,6 +5,7 @@ using System.Linq;
 using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace wEventosSociales
 {
@@ -98,11 +99,12 @@ namespace wEventosSociales
                 cmdTareaEvento.Parameters.AddWithValue("@intCodNivel", this.intCodNivel);
                 await cmdTareaEvento.ExecuteNonQueryAsync();
 
+                MessageBox.Show("Evento creado con éxito.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return true;
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Error al insertar evento: " + ex.Message);
+                MessageBox.Show("Error al insertar evento: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
             finally
