@@ -16,7 +16,7 @@ namespace wEventosSociales
     public partial class FormHistorialEventos : Form 
     {
         public string nombreUsuario = null;
-
+        private clsConexion conexion;
         public FormHistorialEventos()
         {
             InitializeComponent();
@@ -30,13 +30,39 @@ namespace wEventosSociales
             this.Close();
         }
 
-        private void FormHistorialEventos_Load(object sender, EventArgs e)
+        private async void FormHistorialEventos_Load(object sender, EventArgs e)
         {
-            CargarDatosInvitados();
-            CargarDatosEventos();
-            txtDescripcionHistorial.Text = string.Empty; // Limpiar el txtDescripcionHistorial
-            CargarImagenEvento(0);
+            try
+            {
+                // Inicialización básica
+                txtDescripcionHistorial.Text = string.Empty; // Limpiar el txtDescripcionHistorial
+                
+                // Obtener usuario logueado de forma asincrónica
+                int usuarioLoggeado = await conexion.GetUsuarioLoggeadoAsync(nombreUsuario);
+
+                if (usuarioLoggeado > 0)
+                {
+                    MessageBox.Show($"Usuario {nombreUsuario} loggeado correctamente. Puede continuar.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    // Lógica adicional que depende del usuario logueado
+                    CargarDatosInvitados();
+                    CargarDatosEventos();
+                    CargarImagenEvento(0);
+                    
+                }
+                else
+                {
+                    MessageBox.Show("Para ver el historial de eventos, primero inicie sesión.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    this.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Ocurrió un error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
+
+
 
         private async void btnEliminar_Click(object sender, EventArgs e)
         {

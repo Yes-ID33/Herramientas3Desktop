@@ -9,85 +9,67 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 
-
 namespace wEventosSociales
 {
-    public partial class formLogin: Form
+    public partial class formLogin : Form
     {
+        private clsConexion conectar; // Clase para manejar la conexión
+
         public formLogin()
         {
             InitializeComponent();
+            conectar = new clsConexion(); // Inicializar la clase de conexión
         }
-        SqlConnection conexion = new SqlConnection("server=");
 
         private async void btnEntrar_Click(object sender, EventArgs e)
         {
-
-            //Por el momento dejaremos sin logica al boton entrar
-
-            /* // Validar si el usuario y la contraseña están vacíos
-             if (string.IsNullOrEmpty(txtUsuario.Text) || string.IsNullOrEmpty(txtContrasenia.Text))
-             {
-                 MessageBox.Show("Por favor, ingresa tu usuario y contraseña", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                 return;
-             }
-
-             try
-             {
-                 // Abrir la conexión
-                 await conexion.OpenAsync();
-
-                 // Consulta para verificar usuario y contraseña
-                 string consulta = "SELECT cod_usuario, nombre_usuario FROM tblUsuario WHERE correo = @correo AND contrasena_encriptada = @contrasena";
-                 SqlCommand comando = new SqlCommand(consulta, conexion);
-                 comando.Parameters.AddWithValue("@correo", txtUsuario.Text);
-                 comando.Parameters.AddWithValue("@contrasena", txtContrasenia.Text);
-
-                 SqlDataReader lector = await comando.ExecuteReaderAsync();
-
-                 if (lector.HasRows)
-                 {
-                     // Si se encuentra el usuario, cerramos el login y mostramos la aplicación principal
-                     lector.Read();  // Leer el primer (y único) resultado
-                     int codUsuario = lector.GetInt32(0);
-                     string nombreUsuario = lector.GetString(1);
-
-                     MessageBox.Show($"Bienvenido {nombreUsuario}!", "Inicio de sesión exitoso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                     // Abre la ventana principal
-                     FormInfoApp formInfoApp = new FormInfoApp();  // Pasa el codUsuario para mantenerlo disponible
-                     formInfoApp.Show();
-                     this.Close();  // Cierra el formulario de login
-                 }
-                 else
-                 {
-                     MessageBox.Show("Usuario o contraseña incorrectos.", "Error de inicio de sesión", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                 }
-             }
-             catch (Exception ex)
-             {
-                 MessageBox.Show("Hubo un error al intentar iniciar sesión: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-             }
-             finally
-             {
-                 // Asegurarse de cerrar la conexión en cualquier caso
-                 if (conexion.State == System.Data.ConnectionState.Open)
-                     conexion.Close();
-             }*/
-            string nombreUsuario = txtUsuario.Text;
-
-            if (string.IsNullOrEmpty(nombreUsuario))
+            // Validar si el usuario y la contraseña están vacíos
+            if (string.IsNullOrEmpty(txtUsuario.Text) || string.IsNullOrEmpty(txtContrasenia.Text))
             {
-                nombreUsuario = "Usuario";
+                MessageBox.Show("Por favor, ingresa tu usuario y contraseña", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
             }
 
-            MessageBox.Show($"Bienvenido {nombreUsuario}!", "Inicio de sesión exitoso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            try
+            {
+                // Abrir la conexión con clsConexion
+                await conectar.ConectarAsync();
 
-            FormInfoApp formInfoApp = new FormInfoApp();
-            formInfoApp.Show();
+                // Consulta para verificar usuario y contraseña
+                string consulta = "SELECT cod_usuario, nombre_usuario FROM tblUsuario WHERE correo = @correo AND contrasena_encriptada = @contrasena";
+                SqlCommand comando = new SqlCommand(consulta, conectar.conexion); // Usar la conexión desde clsConexion
+                comando.Parameters.AddWithValue("@correo", txtUsuario.Text);
+                comando.Parameters.AddWithValue("@contrasena", txtContrasenia.Text);
 
-            this.Close();
+                SqlDataReader lector = await comando.ExecuteReaderAsync();
 
+                if (lector.HasRows)
+                {
+                    lector.Read();
+                    int codUsuario = lector.GetInt32(0);
+                    string strNombreUsuario = lector.GetString(1);
+
+                    MessageBox.Show($"Bienvenido {strNombreUsuario}!", "Inicio de sesión exitoso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    // Abre el formulario principal
+                    FormInfoApp principalForm = new FormInfoApp(); // Se puede pasar información del usuario si es necesario
+                    principalForm.Show();
+                    this.Close(); // Cierra el formulario de login
+                }
+                else
+                {
+                    MessageBox.Show("Usuario o contraseña incorrectos.", "Error de inicio de sesión", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Hubo un error al intentar iniciar sesión: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                // Desconectar la base de datos usando clsConexion
+                conectar.DesconectarDB();
+            }
         }
 
         private void btnIrCrearCuenta_Click(object sender, EventArgs e)
@@ -103,3 +85,4 @@ namespace wEventosSociales
         }
     }
 }
+

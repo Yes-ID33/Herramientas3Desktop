@@ -114,7 +114,6 @@
             // btnIrCrearCuenta
             // 
             this.btnIrCrearCuenta.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnIrCrearCuenta.Enabled = false;
             this.btnIrCrearCuenta.Font = new System.Drawing.Font("Segoe UI Black", 15F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnIrCrearCuenta.ForeColor = System.Drawing.Color.Transparent;
             this.btnIrCrearCuenta.Location = new System.Drawing.Point(559, 313);

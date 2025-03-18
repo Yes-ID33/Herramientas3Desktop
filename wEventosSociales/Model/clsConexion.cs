@@ -9,8 +9,8 @@ namespace wEventosSociales
 {
     public class clsConexion
     {
-        protected string cadenaConexion = "server=B13-204-22891;database=dboCreacionEventos; integrated security=true";
-        protected SqlConnection conexion;
+        public string cadenaConexion = "server=B13-204-22901;database=dboCreacionEventos; integrated security=true";
+        public SqlConnection conexion;
 
         public async Task ConectarAsync()
         {

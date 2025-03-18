@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="txtInfoTareas.Text" xml:space="preserve">
-    <value>Consulta fácilmente las actividades de tu evento. Por ejemplo, si organizas una boda, podrás ver el horario de la ceremonia, el momento de la sesión fotográfica y la ubicación de cada actividad clave.
+    <value>Consulta fácilmente las actividades de tu evento. Por ejemplo, si organizas una boda, podrás ver y acomodar el horario de la ceremonia, el momento de la sesión fotográfica y la ubicación de cada actividad clave.
 
 🔹 Planes Disponibles:
 El acceso a las listas de tareas varía según el plan elegido:

@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controller\clsControladorDeUsuarios.cs" />
     <Compile Include="Model\clsConexion.cs" />
     <Compile Include="Controller\clsCSV.cs" />
     <Compile Include="Controller\clsDatosCompartidos.cs" />
