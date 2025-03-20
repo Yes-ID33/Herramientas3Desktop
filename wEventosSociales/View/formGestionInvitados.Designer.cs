@@ -35,15 +35,15 @@
             this.cerrarSesionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dtgInvitados = new System.Windows.Forms.DataGridView();
-            this.intCodigoInvitado = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.columNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.columCorreo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.columTelefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnLimpiarDatos = new System.Windows.Forms.Button();
             this.btnCargarCorreos = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.btnSubirLista = new System.Windows.Forms.Button();
+            this.intCodigoInvitado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.columNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.columCorreo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.columTelefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgInvitados)).BeginInit();
             this.SuspendLayout();
@@ -72,21 +72,21 @@
             // inciarSesionToolStripMenuItem
             // 
             this.inciarSesionToolStripMenuItem.Name = "inciarSesionToolStripMenuItem";
-            this.inciarSesionToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.inciarSesionToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
             this.inciarSesionToolStripMenuItem.Text = "&Volver";
             this.inciarSesionToolStripMenuItem.Click += new System.EventHandler(this.inciarSesionToolStripMenuItem_Click);
             // 
             // cerrarSesionToolStripMenuItem
             // 
             this.cerrarSesionToolStripMenuItem.Name = "cerrarSesionToolStripMenuItem";
-            this.cerrarSesionToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.cerrarSesionToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
             this.cerrarSesionToolStripMenuItem.Text = "&Cerrar sesion";
             this.cerrarSesionToolStripMenuItem.Click += new System.EventHandler(this.cerrarSesionToolStripMenuItem_Click);
             // 
             // salirToolStripMenuItem
             // 
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
             this.salirToolStripMenuItem.Text = "&Salir";
             this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
@@ -99,35 +99,11 @@
             this.columNombre,
             this.columCorreo,
             this.columTelefono});
-            this.dtgInvitados.Location = new System.Drawing.Point(139, 109);
+            this.dtgInvitados.Location = new System.Drawing.Point(117, 109);
             this.dtgInvitados.Name = "dtgInvitados";
-            this.dtgInvitados.Size = new System.Drawing.Size(528, 244);
+            this.dtgInvitados.Size = new System.Drawing.Size(561, 244);
             this.dtgInvitados.TabIndex = 1;
             this.dtgInvitados.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgInvitados_CellContentClick);
-            // 
-            // intCodigoInvitado
-            // 
-            this.intCodigoInvitado.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.intCodigoInvitado.HeaderText = "ID";
-            this.intCodigoInvitado.Name = "intCodigoInvitado";
-            // 
-            // columNombre
-            // 
-            this.columNombre.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.columNombre.HeaderText = "Nombre";
-            this.columNombre.Name = "columNombre";
-            // 
-            // columCorreo
-            // 
-            this.columCorreo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.columCorreo.HeaderText = "Correo Electronico";
-            this.columCorreo.Name = "columCorreo";
-            // 
-            // columTelefono
-            // 
-            this.columTelefono.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.columTelefono.HeaderText = "Telefono";
-            this.columTelefono.Name = "columTelefono";
             // 
             // btnLimpiarDatos
             // 
@@ -212,6 +188,30 @@
             this.btnSubirLista.UseVisualStyleBackColor = false;
             this.btnSubirLista.Click += new System.EventHandler(this.btnSubirLista_Click);
             // 
+            // intCodigoInvitado
+            // 
+            this.intCodigoInvitado.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.intCodigoInvitado.HeaderText = "ID";
+            this.intCodigoInvitado.Name = "intCodigoInvitado";
+            // 
+            // columNombre
+            // 
+            this.columNombre.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.columNombre.HeaderText = "Nombre";
+            this.columNombre.Name = "columNombre";
+            // 
+            // columCorreo
+            // 
+            this.columCorreo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.columCorreo.HeaderText = "Correo Electronico";
+            this.columCorreo.Name = "columCorreo";
+            // 
+            // columTelefono
+            // 
+            this.columTelefono.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.columTelefono.HeaderText = "Telefono";
+            this.columTelefono.Name = "columTelefono";
+            // 
             // FormGestionInvitados
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -249,12 +249,12 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.Button btnSubirLista;
+        private System.Windows.Forms.ToolStripMenuItem inciarSesionToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cerrarSesionToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
         private System.Windows.Forms.DataGridViewTextBoxColumn intCodigoInvitado;
         private System.Windows.Forms.DataGridViewTextBoxColumn columNombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn columCorreo;
         private System.Windows.Forms.DataGridViewTextBoxColumn columTelefono;
-        private System.Windows.Forms.ToolStripMenuItem inciarSesionToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem cerrarSesionToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
     }
 }

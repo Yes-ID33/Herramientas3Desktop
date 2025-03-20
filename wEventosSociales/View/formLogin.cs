@@ -13,12 +13,12 @@ namespace wEventosSociales
 {
     public partial class formLogin : Form
     {
-        private clsConexion conectar; // Clase para manejar la conexión
+        private clsControladorDeUsuarios controlador; // Clase controlador para manejar usuarios
 
         public formLogin()
         {
             InitializeComponent();
-            conectar = new clsConexion(); // Inicializar la clase de conexión
+            controlador = new clsControladorDeUsuarios(); // Inicializar el controlador
         }
 
         private async void btnEntrar_Click(object sender, EventArgs e)
@@ -32,29 +32,20 @@ namespace wEventosSociales
 
             try
             {
-                // Abrir la conexión con clsConexion
-                await conectar.ConectarAsync();
+                // Usar la función de encriptación del controlador
+                string contrasenaEncriptada = controlador.EncriptarContrasena(txtContrasenia.Text);
 
-                // Consulta para verificar usuario y contraseña
-                string consulta = "SELECT cod_usuario, nombre_usuario FROM tblUsuario WHERE correo = @correo AND contrasena_encriptada = @contrasena";
-                SqlCommand comando = new SqlCommand(consulta, conectar.conexion); // Usar la conexión desde clsConexion
-                comando.Parameters.AddWithValue("@correo", txtUsuario.Text);
-                comando.Parameters.AddWithValue("@contrasena", txtContrasenia.Text);
+                // Verificar las credenciales de inicio de sesión
+                var resultado = await controlador.IniciarSesionAsync(txtUsuario.Text, contrasenaEncriptada);
 
-                SqlDataReader lector = await comando.ExecuteReaderAsync();
-
-                if (lector.HasRows)
+                if (resultado.Item1) // Si el inicio de sesión fue exitoso
                 {
-                    lector.Read();
-                    int codUsuario = lector.GetInt32(0);
-                    string strNombreUsuario = lector.GetString(1);
+                    MessageBox.Show($"Bienvenido {resultado.Item3}!", "Inicio de sesión exitoso", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                    MessageBox.Show($"Bienvenido {strNombreUsuario}!", "Inicio de sesión exitoso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                    // Abre el formulario principal
-                    FormInfoApp principalForm = new FormInfoApp(); // Se puede pasar información del usuario si es necesario
+                    // Abrir el formulario principal
+                    FormInfoApp principalForm = new FormInfoApp();
                     principalForm.Show();
-                    this.Close(); // Cierra el formulario de login
+                    this.Close();
                 }
                 else
                 {
@@ -63,12 +54,7 @@ namespace wEventosSociales
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Hubo un error al intentar iniciar sesión: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            finally
-            {
-                // Desconectar la base de datos usando clsConexion
-                conectar.DesconectarDB();
+                MessageBox.Show($"Hubo un error al intentar iniciar sesión: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -85,4 +71,5 @@ namespace wEventosSociales
         }
     }
 }
+
 

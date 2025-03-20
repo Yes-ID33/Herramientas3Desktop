@@ -4,11 +4,24 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
+using System.Security.Cryptography;
 
 namespace wEventosSociales
 {
     public class clsControladorDeUsuarios : clsConexion
     {
+        //método para encriptar contraseñas
+        public string EncriptarContrasena(string contrasena)
+        {
+            using (SHA256 sha256 = SHA256.Create())
+            {
+                byte[] bytes = Encoding.UTF8.GetBytes(contrasena);
+                byte[] hash = sha256.ComputeHash(bytes);
+                return Convert.ToBase64String(hash);
+            }
+        }
+
+
         // Método para iniciar sesión
         public async Task<(bool, int, string)> IniciarSesionAsync(string correo, string contrasena)
         {

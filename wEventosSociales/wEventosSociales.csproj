@@ -49,10 +49,10 @@
     <Compile Include="Controller\clsControladorDeUsuarios.cs" />
     <Compile Include="Model\clsConexion.cs" />
     <Compile Include="Controller\clsCSV.cs" />
-    <Compile Include="Controller\clsDatosCompartidos.cs" />
+    <Compile Include="Model\clsDatosCompartidos.cs" />
     <Compile Include="Model\clsEliminarEnDB.cs" />
     <Compile Include="Model\clsGuardarBD.cs" />
-    <Compile Include="Controller\clsHistorial.cs" />
+    <Compile Include="Model\clsHistorial.cs" />
     <Compile Include="Controller\clsInvitado.cs" />
     <Compile Include="Model\clsLeerEnDB.cs" />
     <Compile Include="View\Form1.cs">
@@ -85,11 +85,11 @@
     <Compile Include="View\formInicio.Designer.cs">
       <DependentUpon>formInicio.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\formListaTareas.cs">
+    <Compile Include="View\formIndicacionesEvento.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\formListaTareas.Designer.cs">
-      <DependentUpon>formListaTareas.cs</DependentUpon>
+    <Compile Include="View\formIndicacionesEvento.Designer.cs">
+      <DependentUpon>formIndicacionesEvento.cs</DependentUpon>
     </Compile>
     <Compile Include="View\formLogin.cs">
       <SubType>Form</SubType>
@@ -132,8 +132,8 @@
     <EmbeddedResource Include="View\formInicio.resx">
       <DependentUpon>formInicio.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\formListaTareas.resx">
-      <DependentUpon>formListaTareas.cs</DependentUpon>
+    <EmbeddedResource Include="View\formIndicacionesEvento.resx">
+      <DependentUpon>formIndicacionesEvento.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\formLogin.resx">
       <DependentUpon>formLogin.cs</DependentUpon>

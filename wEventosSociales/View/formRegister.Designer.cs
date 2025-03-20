@@ -67,7 +67,6 @@
             this.menuToolStripMenuItem.Name = "menuToolStripMenuItem";
             this.menuToolStripMenuItem.Size = new System.Drawing.Size(50, 20);
             this.menuToolStripMenuItem.Text = "Menu";
-            this.menuToolStripMenuItem.Click += new System.EventHandler(this.menuToolStripMenuItem_Click);
             // 
             // inicioToolStripMenuItem
             // 
@@ -147,16 +146,15 @@
             this.txtContraseniaDos.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtContraseniaDos.Location = new System.Drawing.Point(406, 229);
             this.txtContraseniaDos.Name = "txtContraseniaDos";
-            this.txtContraseniaDos.Size = new System.Drawing.Size(140, 27);
+            this.txtContraseniaDos.Size = new System.Drawing.Size(159, 27);
             this.txtContraseniaDos.TabIndex = 8;
-            this.txtContraseniaDos.TextChanged += new System.EventHandler(this.txtContraseniaDos_TextChanged);
             // 
             // txtContraseniaUno
             // 
             this.txtContraseniaUno.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtContraseniaUno.Location = new System.Drawing.Point(406, 187);
             this.txtContraseniaUno.Name = "txtContraseniaUno";
-            this.txtContraseniaUno.Size = new System.Drawing.Size(140, 27);
+            this.txtContraseniaUno.Size = new System.Drawing.Size(159, 27);
             this.txtContraseniaUno.TabIndex = 7;
             // 
             // btnCrearCuenta

@@ -69,3 +69,8 @@ D:\Herramientas3Desktop-master\wEventosSociales\obj\Debug\wEventosSociales.pdb
 D:\Herramientas3Desktop-master\wEventosSociales\bin\Debug\wEventosSociales.exe.config
 D:\Herramientas3Desktop-master\wEventosSociales\bin\Debug\wEventosSociales.exe
 D:\Herramientas3Desktop-master\wEventosSociales\bin\Debug\wEventosSociales.pdb
+D:\HP3 12-2\Herramientas3Desktop-master\wEventosSociales\bin\Debug\wEventosSociales.exe.config
+D:\HP3 12-2\Herramientas3Desktop-master\wEventosSociales\bin\Debug\wEventosSociales.exe
+D:\HP3 12-2\Herramientas3Desktop-master\wEventosSociales\bin\Debug\wEventosSociales.pdb
+D:\HP3 12-2\Herramientas3Desktop-master\wEventosSociales\obj\Debug\wEventosSociales.exe
+D:\HP3 12-2\Herramientas3Desktop-master\wEventosSociales\obj\Debug\wEventosSociales.pdb
