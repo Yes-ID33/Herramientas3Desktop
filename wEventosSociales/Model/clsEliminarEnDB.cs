@@ -15,7 +15,7 @@ namespace wEventosSociales
 
         public clsEliminarEnDB() { }
 
-        // Método para verificar y eliminar evento si el usuario loggeado es el creador
+        /* Método para verificar y eliminar evento si el usuario loggeado es el creador
         public async Task<bool> EliminarEventoAsync(int codEvento, string nombreUsuario)
         {
             try
@@ -71,5 +71,6 @@ namespace wEventosSociales
                 DesconectarDB();
             }
         }
+        */
     }
 }

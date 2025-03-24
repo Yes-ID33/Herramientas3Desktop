@@ -74,3 +74,39 @@ D:\HP3 12-2\Herramientas3Desktop-master\wEventosSociales\bin\Debug\wEventosSocia
 D:\HP3 12-2\Herramientas3Desktop-master\wEventosSociales\bin\Debug\wEventosSociales.pdb
 D:\HP3 12-2\Herramientas3Desktop-master\wEventosSociales\obj\Debug\wEventosSociales.exe
 D:\HP3 12-2\Herramientas3Desktop-master\wEventosSociales\obj\Debug\wEventosSociales.pdb
+D:\atrabajopayes\Herramientas3Desktop-master (1)\Herramientas3Desktop-master\wEventosSociales\bin\Debug\wEventosSociales.exe.config
+D:\atrabajopayes\Herramientas3Desktop-master (1)\Herramientas3Desktop-master\wEventosSociales\bin\Debug\wEventosSociales.exe
+D:\atrabajopayes\Herramientas3Desktop-master (1)\Herramientas3Desktop-master\wEventosSociales\bin\Debug\wEventosSociales.pdb
+D:\atrabajopayes\Herramientas3Desktop-master (1)\Herramientas3Desktop-master\wEventosSociales\obj\Debug\wEventosSociales.csproj.AssemblyReference.cache
+D:\atrabajopayes\Herramientas3Desktop-master (1)\Herramientas3Desktop-master\wEventosSociales\obj\Debug\wEventosSociales.FormCrearEvento.resources
+D:\atrabajopayes\Herramientas3Desktop-master (1)\Herramientas3Desktop-master\wEventosSociales\obj\Debug\wEventosSociales.FormGestionInvitados.resources
+D:\atrabajopayes\Herramientas3Desktop-master (1)\Herramientas3Desktop-master\wEventosSociales\obj\Debug\wEventosSociales.FormInfoApp.resources
+D:\atrabajopayes\Herramientas3Desktop-master (1)\Herramientas3Desktop-master\wEventosSociales\obj\Debug\wEventosSociales.FormInicio.resources
+D:\atrabajopayes\Herramientas3Desktop-master (1)\Herramientas3Desktop-master\wEventosSociales\obj\Debug\wEventosSociales.FormListaTareas.resources
+D:\atrabajopayes\Herramientas3Desktop-master (1)\Herramientas3Desktop-master\wEventosSociales\obj\Debug\wEventosSociales.formLogin.resources
+D:\atrabajopayes\Herramientas3Desktop-master (1)\Herramientas3Desktop-master\wEventosSociales\obj\Debug\wEventosSociales.FormPlanificacion.resources
+D:\atrabajopayes\Herramientas3Desktop-master (1)\Herramientas3Desktop-master\wEventosSociales\obj\Debug\wEventosSociales.FormPlanificacionActividades.resources
+D:\atrabajopayes\Herramientas3Desktop-master (1)\Herramientas3Desktop-master\wEventosSociales\obj\Debug\wEventosSociales.formRegister.resources
+D:\atrabajopayes\Herramientas3Desktop-master (1)\Herramientas3Desktop-master\wEventosSociales\obj\Debug\wEventosSociales.Properties.Resources.resources
+D:\atrabajopayes\Herramientas3Desktop-master (1)\Herramientas3Desktop-master\wEventosSociales\obj\Debug\wEventosSociales.csproj.GenerateResource.cache
+D:\atrabajopayes\Herramientas3Desktop-master (1)\Herramientas3Desktop-master\wEventosSociales\obj\Debug\wEventosSociales.csproj.CoreCompileInputs.cache
+D:\atrabajopayes\Herramientas3Desktop-master (1)\Herramientas3Desktop-master\wEventosSociales\obj\Debug\wEventosSociales.exe
+D:\atrabajopayes\Herramientas3Desktop-master (1)\Herramientas3Desktop-master\wEventosSociales\obj\Debug\wEventosSociales.pdb
+C:\HP3\Test-Julian\Herramientas3Desktop-master\wEventosSociales\bin\Debug\wEventosSociales.exe.config
+C:\HP3\Test-Julian\Herramientas3Desktop-master\wEventosSociales\bin\Debug\wEventosSociales.exe
+C:\HP3\Test-Julian\Herramientas3Desktop-master\wEventosSociales\bin\Debug\wEventosSociales.pdb
+C:\HP3\Test-Julian\Herramientas3Desktop-master\wEventosSociales\obj\Debug\wEventosSociales.csproj.AssemblyReference.cache
+C:\HP3\Test-Julian\Herramientas3Desktop-master\wEventosSociales\obj\Debug\wEventosSociales.FormCrearEvento.resources
+C:\HP3\Test-Julian\Herramientas3Desktop-master\wEventosSociales\obj\Debug\wEventosSociales.FormGestionInvitados.resources
+C:\HP3\Test-Julian\Herramientas3Desktop-master\wEventosSociales\obj\Debug\wEventosSociales.FormInfoApp.resources
+C:\HP3\Test-Julian\Herramientas3Desktop-master\wEventosSociales\obj\Debug\wEventosSociales.FormInicio.resources
+C:\HP3\Test-Julian\Herramientas3Desktop-master\wEventosSociales\obj\Debug\wEventosSociales.FormListaTareas.resources
+C:\HP3\Test-Julian\Herramientas3Desktop-master\wEventosSociales\obj\Debug\wEventosSociales.formLogin.resources
+C:\HP3\Test-Julian\Herramientas3Desktop-master\wEventosSociales\obj\Debug\wEventosSociales.FormPlanificacion.resources
+C:\HP3\Test-Julian\Herramientas3Desktop-master\wEventosSociales\obj\Debug\wEventosSociales.FormPlanificacionActividades.resources
+C:\HP3\Test-Julian\Herramientas3Desktop-master\wEventosSociales\obj\Debug\wEventosSociales.formRegister.resources
+C:\HP3\Test-Julian\Herramientas3Desktop-master\wEventosSociales\obj\Debug\wEventosSociales.Properties.Resources.resources
+C:\HP3\Test-Julian\Herramientas3Desktop-master\wEventosSociales\obj\Debug\wEventosSociales.csproj.GenerateResource.cache
+C:\HP3\Test-Julian\Herramientas3Desktop-master\wEventosSociales\obj\Debug\wEventosSociales.csproj.CoreCompileInputs.cache
+C:\HP3\Test-Julian\Herramientas3Desktop-master\wEventosSociales\obj\Debug\wEventosSociales.exe
+C:\HP3\Test-Julian\Herramientas3Desktop-master\wEventosSociales\obj\Debug\wEventosSociales.pdb

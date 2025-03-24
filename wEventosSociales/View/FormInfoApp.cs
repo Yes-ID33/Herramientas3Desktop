@@ -71,12 +71,7 @@ namespace wEventosSociales
             this.Close();
         }
 
-        private void btnHistorialEve_Click(object sender, EventArgs e)
-        {
-            FormHistorialEventos formHistorial = new FormHistorialEventos(); 
-            formHistorial.Show();
-            this.Close();
-        }
+     
 
         private void salirToolStripMenuItem_Click(object sender, EventArgs e)
         {

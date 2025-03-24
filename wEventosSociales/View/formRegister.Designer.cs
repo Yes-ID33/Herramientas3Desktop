@@ -227,7 +227,6 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "formRegister";
             this.Text = "formRegister";
-            this.Load += new System.EventHandler(this.formRegister_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();

@@ -17,30 +17,33 @@ namespace wEventosSociales
 {
     public partial class FormCrearEvento : Form
     {
-        private clsGuardarBD evento = new clsGuardarBD(); // Declaración del objeto clsEvento
-        private clsDatosCompartidos datosCompartidos = new clsDatosCompartidos(); // Declaración del objeto clsDatosCompartidos
+        private clsGuardarBD evento = new clsGuardarBD(); // Objeto para guardar datos del evento
+        private clsDatosCompartidos datosCompartidos = new clsDatosCompartidos(); // Almacén temporal de datos
 
         public FormCrearEvento()
         {
             InitializeComponent();
             // Cambiar el tamaño de la fuente del TextBox txtDescripcion
-            txtDescripcion.Font = new Font(txtDescripcion.Font.FontFamily, 14, FontStyle.Regular);
+            txtDescripcion.Font = new Font(txtDescripcion.Font.FontFamily, 13, FontStyle.Regular);
         }
 
         private void formCrearEvento_Load(object sender, EventArgs e)
         {
             // Agregar opciones al ComboBox cboTipoEvento
-            cboTipoEvento.Items.AddRange(new string[] { "Boda", "Cumpleaños", "Conferencia", "Reunion" });
+            cboTipoEvento.Items.AddRange(new string[] { "Boda", "Cumpleaños", "Conferencia", "Reunión" });
 
             // Agregar opciones al ComboBox cboNivelEvento
             cboNivelEvento.Items.AddRange(new string[] { "Bronce", "Plata", "Oro" });
+
+            // Mostrar el usuario loggeado en la interfaz
+            lblUsuario.Text = $"Usuario: {clsSesion.strNombreUsuarioLoggeado}";
         }
 
         private async void btnPlanificacion_Click(object sender, EventArgs e)
         {
             try
             {
-                // Verificar si todos los campos están llenos
+                // Validar si todos los campos están llenos
                 if (cboTipoEvento.SelectedItem != null && cboNivelEvento.SelectedItem != null && !string.IsNullOrEmpty(txtUbicacion.Text)
                     && dtpFecha.Value != null && dtpHora.Value != null && !string.IsNullOrEmpty(txtDescripcion.Text) && !string.IsNullOrEmpty(txtInvitadosAprox.Text))
                 {
@@ -50,34 +53,30 @@ namespace wEventosSociales
                         return;
                     }
 
-                    // Crear una instancia del evento con los datos ingresados
-                    evento.strTipoEvento = cboTipoEvento.SelectedItem.ToString();
+                    // Crear el evento con los datos ingresados
                     evento.strUbicacion = txtUbicacion.Text;
                     evento.datFecha = dtpFecha.Value;
                     evento.datHora = dtpHora.Value.TimeOfDay;
-                    evento.strDescripcion = cboTipoEvento.SelectedItem.ToString() + " \n" + txtDescripcion.Text;
+                    evento.strDescripcion = $"{cboTipoEvento.SelectedItem}\n{txtDescripcion.Text}";
                     evento.intInvitadosAprox = int.Parse(txtInvitadosAprox.Text);
-                    evento.intCodNivel = cboNivelEvento.SelectedIndex + 1; // Asumimos que los índices coinciden con cod_nivel
+                    evento.intCodNivel = cboNivelEvento.SelectedIndex + 1; // Corresponde a los niveles del evento (Bronce, Plata, Oro)
+                    evento.intCodUsuario = clsSesion.intCodUsuarioLoggeado; // Usamos el código del usuario desde clsSesion
 
-                    // Guardar datos temporalmente
-
-                    // Mostrar el formulario FormPlanificacion y esconder el form actual
-                    clsDatosCompartidos datosCompartidos = new clsDatosCompartidos();
+                    // Guardar temporalmente (si aplica) y luego mostrar la planificación
                     FormPlanificacion formPlanificacion = new FormPlanificacion(evento, datosCompartidos);
 
+                    // Ocultar el formulario actual y mostrar el siguiente
                     this.Hide();
                     formPlanificacion.Show();
 
-                    // Insertar los datos en la base de datos
+                    // Insertar los datos del evento en la base de datos
                     if (await evento.InsertarEventoAsync())
                     {
-                        // Mostrar mensaje de éxito
-                        MessageBox.Show("Datos Ingresados");
+                        MessageBox.Show("Evento creado exitosamente", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                     else
                     {
-                        // Mostrar mensaje de error
-                        MessageBox.Show("Error al ingresar el dato.");
+                        MessageBox.Show("Error al crear el evento.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
                 else
@@ -87,8 +86,7 @@ namespace wEventosSociales
             }
             catch (Exception ex)
             {
-                // Mostrar mensaje de error
-                MessageBox.Show("Error al ingresar el dato: " + ex.Message);
+                MessageBox.Show($"Error al ingresar el dato: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -96,7 +94,7 @@ namespace wEventosSociales
         {
             if (cboTipoEvento.SelectedItem == null)
             {
-                return; 
+                return;
             }
 
             string tipoEvento = cboTipoEvento.SelectedItem.ToString().Trim(); // Elimina espacios en blanco al inicio y al final
@@ -106,7 +104,7 @@ namespace wEventosSociales
                 case "Boda":
                 case "Cumpleaños":
                 case "Conferencia":
-                case "Reunion":
+                case "Reunión":
                     lblDescripcionEvento.Visible = true;
                     break;
                 default:
@@ -120,30 +118,24 @@ namespace wEventosSociales
             }
         }
 
-
-        private void cerrarToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-         
-        }
-
         private void btnLimpiar_Click(object sender, EventArgs e)
         {
-            cboTipoEvento.SelectedIndex = -1; // Desseleccionar el ComboBox
-            cboNivelEvento.SelectedIndex = -1; // Desseleccionar el ComboBox
+            // Restablecer todos los campos del formulario
+            cboTipoEvento.SelectedIndex = -1; // Desseleccionar ComboBox
+            cboNivelEvento.SelectedIndex = -1; // Desseleccionar ComboBox
             txtUbicacion.Clear();
             txtInvitadosAprox.Clear();
             txtDescripcion.Clear();
-        }
-
-        private void salirToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-     
         }
 
         private void salirToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
+
+        private void cerrarToolStripMenuItem_Click(object sender, EventArgs e)
+        { }
+        private void salirToolStripMenuItem_Click(object sender, EventArgs e)
+        { }
     }
 }
-

@@ -46,13 +46,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Model\clsSesion.cs" />
     <Compile Include="Controller\clsControladorDeUsuarios.cs" />
     <Compile Include="Model\clsConexion.cs" />
     <Compile Include="Controller\clsCSV.cs" />
     <Compile Include="Model\clsDatosCompartidos.cs" />
     <Compile Include="Model\clsEliminarEnDB.cs" />
     <Compile Include="Model\clsGuardarBD.cs" />
-    <Compile Include="Model\clsHistorial.cs" />
     <Compile Include="Controller\clsInvitado.cs" />
     <Compile Include="Model\clsLeerEnDB.cs" />
     <Compile Include="View\Form1.cs">
@@ -66,12 +66,6 @@
     </Compile>
     <Compile Include="View\formGestionInvitados.Designer.cs">
       <DependentUpon>formGestionInvitados.cs</DependentUpon>
-    </Compile>
-    <Compile Include="View\formHistorialEventos.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="View\formHistorialEventos.Designer.cs">
-      <DependentUpon>formHistorialEventos.cs</DependentUpon>
     </Compile>
     <Compile Include="View\FormInfoApp.cs">
       <SubType>Form</SubType>
@@ -122,9 +116,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\formGestionInvitados.resx">
       <DependentUpon>formGestionInvitados.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="View\formHistorialEventos.resx">
-      <DependentUpon>formHistorialEventos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\FormInfoApp.resx">
       <DependentUpon>FormInfoApp.cs</DependentUpon>

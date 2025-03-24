@@ -26,7 +26,7 @@ namespace wEventosSociales
             // Validar si el usuario y la contraseña están vacíos
             if (string.IsNullOrEmpty(txtUsuario.Text) || string.IsNullOrEmpty(txtContrasenia.Text))
             {
-                MessageBox.Show("Por favor, ingresa tu usuario y contraseña", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Por favor, ingresa tu correo y contraseña", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
@@ -40,16 +40,23 @@ namespace wEventosSociales
 
                 if (resultado.Item1) // Si el inicio de sesión fue exitoso
                 {
-                    MessageBox.Show($"Bienvenido {resultado.Item3}!", "Inicio de sesión exitoso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    // Guardar el correo en clsSesion
+                    clsSesion.strCorreo = txtUsuario.Text;
+
+                    // Obtener y guardar el nombre de usuario y código de usuario en clsSesion
+                    clsSesion.strNombreUsuarioLoggeado = await clsSesion.ObtenerNombreUsuarioAsync(clsSesion.strCorreo);
+                    clsSesion.intCodUsuarioLoggeado = await clsSesion.ObtenerCodigoUsuarioAsync(clsSesion.strCorreo);
+
+                    MessageBox.Show($"Bienvenido, {clsSesion.strNombreUsuarioLoggeado}!", "Inicio de sesión exitoso", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                     // Abrir el formulario principal
-                    FormInfoApp principalForm = new FormInfoApp();
-                    principalForm.Show();
+                    FormInfoApp Formppal = new FormInfoApp();
+                    Formppal.Show();
                     this.Close();
                 }
                 else
                 {
-                    MessageBox.Show("Usuario o contraseña incorrectos.", "Error de inicio de sesión", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Correo o contraseña incorrectos.", "Error de inicio de sesión", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             catch (Exception ex)
@@ -71,5 +78,3 @@ namespace wEventosSociales
         }
     }
 }
-
-

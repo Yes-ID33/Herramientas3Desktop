@@ -29,7 +29,7 @@ namespace wEventosSociales
         {
             try
             {
-                using (SqlConnection conexion = new SqlConnection(cadenaConexion))
+                using (SqlConnection conexion = new SqlConnection(CadenaConexion))
                 {
                     conexion.Open();
 

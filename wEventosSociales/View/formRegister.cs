@@ -20,11 +20,6 @@ namespace wEventosSociales
             controlador = new clsControladorDeUsuarios(); // Inicializar el controlador
         }
 
-        private void formRegister_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private async void btnCrearCuenta_Click(object sender, EventArgs e)
         {
             // Validar si los campos están llenos
@@ -54,11 +49,19 @@ namespace wEventosSociales
 
                 if (resultado)
                 {
-                    MessageBox.Show("Usuario registrado exitosamente.", "Registro Exitoso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    FormInfoApp formInfo = new FormInfoApp();
-                    formInfo.Show();
+                    // Guardar los datos en clsSesion
+                    clsSesion.strNombreUsuarioLoggeado = txtNombreUsuario.Text;
+                    clsSesion.strCorreo = txtCorreoUsuario.Text;
+
+                    // Obtener el código del usuario recién registrado
+                    clsSesion.intCodUsuarioLoggeado = await clsSesion.ObtenerCodigoUsuarioAsync(clsSesion.strCorreo);
+
+                    MessageBox.Show("Usuario registrado exitosamente. Por favor inicia sesión.", "Registro Exitoso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    // Redirigir al formulario de inicio de sesión
+                    formLogin formLogin = new formLogin();
+                    formLogin.Show();
                     this.Close();
-                    MessageBox.Show($"Bienvenido!", "Inicio de sesión exitoso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
                 {

@@ -79,18 +79,6 @@ namespace wEventosSociales
                 // Obtener el último código de evento insertado
                 int ultimoCodEvento = Convert.ToInt32(await new SqlCommand("SELECT SCOPE_IDENTITY()", conexion).ExecuteScalarAsync());
 
-                string insertarHistorial = "INSERT INTO tblHistorial (cod_evento, cod_usuario, fecha, hora, ubicacion, invitados_aprox, descripcion) VALUES (@intCodEvento, @intCodUsuario, @datFecha, @datHora, @strUbicacion, @intInvitadosAprox, @strDescripcion)";
-                SqlCommand cmdHistorial = new SqlCommand(insertarHistorial, conexion);
-
-                cmdHistorial.Parameters.AddWithValue("@intCodEvento", ultimoCodEvento);
-                cmdHistorial.Parameters.AddWithValue("@intCodUsuario", this.intCodUsuario);
-                cmdHistorial.Parameters.AddWithValue("@datFecha", this.datFecha);
-                cmdHistorial.Parameters.AddWithValue("@datHora", this.datHora);
-                cmdHistorial.Parameters.AddWithValue("@strUbicacion", this.strUbicacion);
-                cmdHistorial.Parameters.AddWithValue("@intInvitadosAprox", this.intInvitadosAprox);
-                cmdHistorial.Parameters.AddWithValue("@strDescripcion", this.strDescripcion);
-                await cmdHistorial.ExecuteNonQueryAsync();
-
                 string insertarTareaEvento = "INSERT INTO tblTareaEvento (cod_evento, descripcion_tarea, cod_nivel) VALUES (@intCodEvento, @strDescripcionTarea, @intCodNivel)";
                 SqlCommand cmdTareaEvento = new SqlCommand(insertarTareaEvento, conexion);
 

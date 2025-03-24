@@ -21,7 +21,6 @@ namespace wEventosSociales
             }
         }
 
-
         // Método para iniciar sesión
         public async Task<(bool, int, string)> IniciarSesionAsync(string correo, string contrasena)
         {

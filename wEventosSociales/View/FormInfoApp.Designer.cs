@@ -197,21 +197,7 @@
             this.button1.Text = "Historial";
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button1.UseVisualStyleBackColor = false;
-            // 
-            // btnHistorialEve
-            // 
-            this.btnHistorialEve.BackColor = System.Drawing.Color.Black;
-            this.btnHistorialEve.Font = new System.Drawing.Font("Segoe UI Black", 21F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHistorialEve.ForeColor = System.Drawing.Color.Transparent;
-            this.btnHistorialEve.Location = new System.Drawing.Point(625, 486);
-            this.btnHistorialEve.Name = "btnHistorialEve";
-            this.btnHistorialEve.Size = new System.Drawing.Size(301, 71);
-            this.btnHistorialEve.TabIndex = 10;
-            this.btnHistorialEve.Text = "Historial de eventos";
-            this.btnHistorialEve.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnHistorialEve.UseVisualStyleBackColor = false;
-            this.btnHistorialEve.Click += new System.EventHandler(this.btnHistorialEve_Click);
-            // 
+            //
             // label5
             // 
             this.label5.AutoSize = true;

@@ -9,12 +9,12 @@ namespace wEventosSociales
 {
     public class clsConexion
     {
-        public string cadenaConexion = "server=B13-204-22891;database=dboCreacionEventos; integrated security=true";
-        public SqlConnection conexion;
+        public static string CadenaConexion = "server=DESKTOP-DQC08B4;database=dboCreacionEventos; integrated security=true";
+        public static SqlConnection conexion;
 
         public async Task ConectarAsync()
         {
-            conexion = new SqlConnection(cadenaConexion);
+            conexion = new SqlConnection(CadenaConexion);
             await conexion.OpenAsync();
         }
 
@@ -23,30 +23,6 @@ namespace wEventosSociales
             if (conexion != null && conexion.State == System.Data.ConnectionState.Open)
             {
                 conexion.Close();
-            }
-        }
-
-        // Método para obtener el intCodUsuario del usuario loggeado
-        public async Task<int> GetUsuarioLoggeadoAsync(string strNombreUsuario)
-        {
-            try
-            {
-                await ConectarAsync();
-                string consulta = "SELECT cod_usuario FROM tblUsuario WHERE nombre_usuario = @strNombreUsuario";
-                SqlCommand cmd = new SqlCommand(consulta, conexion);
-                cmd.Parameters.AddWithValue("@strNombreUsuario", strNombreUsuario);
-
-                int intCodUsuario = Convert.ToInt32(await cmd.ExecuteScalarAsync());
-                return intCodUsuario;
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine("Error al obtener el usuario loggeado: " + ex.Message);
-                return -1;
-            }
-            finally
-            {
-                DesconectarDB();
             }
         }
     }
